@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Tum4World</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/x-icon" href="../../resources/placeholderlogo.png">
+    <style>
+    /*body {
+        background-image: url("https://www.psicosocial.it/wp-content/uploads/2020/10/immagine-fissa-si-muove.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }*/
+    h1{
+        font-family: "Trebuchet MS", serif;
+        margin: 0;
+        position: absolute;
+        top: 35%;
+        left: 15%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    p{
+        margin: 0;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    </style>
+</head>
+<body onload="typeWriter()">
+    <h1 id="demo" style="color:#56cc75";></h1>
+    <script>
+        var i = 0;
+        var txt = "Attività 3";
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    </script>
+    <!--<h2>Attività 3</h2>-->
+    <p>descrizione bella</p>
+</body>
+</html>
