@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <title>Tum4World</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/x-icon" href="./images/placeholderlogo.png">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
 </head>
 <body>
   <div class="header">
-    <div class="headerlogo"><img src="./images/placeholderlogo.png" alt="Header Logo"></div>
+    <div class="headerlogo"><img src="images/logo.png" alt="Header Logo"></div>
     <div class="headertitle">TUM4WORLD</div>
     <div class="headernav">
         <div class="headerlogin">
-            <a href="">Login</a>
+            <a href="login.jsp">Login</a>
             <a href="">Iscriviti</a>
         </div>
     </div>
   </div>
   <div class="headerlinks">
-      <a href="">Home</a>
-      <a href="">Chi Siamo</a>
-      <a href="">Attività</a>
-      <a href="">Contatti</a>
+      <a href="homePage.jsp">Home</a>
+      <a href="chiSiamo.jsp">Chi Siamo</a>
+      <a href="attivita.jsp">Attività</a>
+      <a href="contatti.jsp">Contatti</a>
   </div>
 </body>
 </html>

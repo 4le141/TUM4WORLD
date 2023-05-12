@@ -188,12 +188,14 @@ img.right {
 img {
     max-width: 70%;
     height: auto;
-    border: 2px solid black;
-    box-shadow: 2px 2px 2px grey;
     margin: 10px;
+    transition: transform 0.2s ease-in-out;
+
 }
 p.containerImages {
     margin-left: 30px;
     margin-right: 30px;
 }
-
+.animazione:hover {
+    transform: scale(1.2);
+}
