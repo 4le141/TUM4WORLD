@@ -1,4 +1,4 @@
-package com.tum4world.tum4world;
+package com.tum4world.tum4world.servlet;
 
 import java.io.*;
 import javax.servlet.http.*;

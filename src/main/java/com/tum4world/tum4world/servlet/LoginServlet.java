@@ -1,15 +1,15 @@
-package com.tum4world.tum4world;
+package com.tum4world.tum4world.servlet;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "ServletLogin", value = "/ServletLogin")
-public class ServletLogin extends HttpServlet {
+@WebServlet(name = "LoginServlet", value = "/login")
+public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        request.getRequestDispatcher("login.jsp").forward(request, response);
     }
 
     boolean validate(String username, String password) {
@@ -21,7 +21,7 @@ public class ServletLogin extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         if (!validate(username, password)) {
-            response.sendRedirect("../../webapp/WEB-INF/login.jsp");
+            response.sendRedirect("login.jsp");
         } else {
             HttpSession s = request.getSession(true);
             s.setAttribute("autenticato", true);
