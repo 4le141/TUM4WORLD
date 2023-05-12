@@ -20,7 +20,10 @@
 </div>
 <div class="container">
     <p> Per scaricare il nostro volantino
-        <button>Clicca qui</button>
+        <a href="pdf/volantino.pdf" download>
+            <button> clicca qui </button>
+        </a>
+
     </p>
 </div>
 </body>
