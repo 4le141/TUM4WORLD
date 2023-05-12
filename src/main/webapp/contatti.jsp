@@ -1,15 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Contattaci!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
-    <style> /* ho messo questo così utente non può modificare dimensione textarea*/
-    textarea {
-        resize: none;
-    }
-    </style>
+    <jsp:include page="header.jsp"/>
 </head>
 <body>
 <div class="info">

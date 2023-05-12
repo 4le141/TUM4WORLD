@@ -2,9 +2,10 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Tum4World</title>
+  <title>attivita</title>
   <link rel="stylesheet" href="main.css">
   <link rel="icon" type="image/x-icon" href="/images/placeholderlogo.png">
+  <jsp:include page="header.jsp"/>
 
   <style>
     /* style per le colonne */

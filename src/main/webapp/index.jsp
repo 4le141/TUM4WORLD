@@ -3,6 +3,9 @@
 <html>
 <head>
     <title>JSP - Hello World</title>
+    <jsp:include page="header.jsp"/>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
 </head>
 <body>
 <h1><%= "Hello World!" %>
