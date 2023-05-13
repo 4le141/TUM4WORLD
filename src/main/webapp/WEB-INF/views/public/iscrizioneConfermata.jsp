@@ -4,6 +4,6 @@
   <jsp:param name="title" value="Iscrizione Confermata" />
 </jsp:include>
 
-<div> Iscrizione confermata TODO</div>
+<div class="container"> Iscrizione confermata TODO</div>
 
 <jsp:include page="/WEB-INF/views/footer.jsp" />
