@@ -1,13 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Login</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css">
-    <jsp:include page="header.jsp"/>
-</head>
-<body>
+
+<jsp:include page="/WEB-INF/views/header.jsp" >
+    <jsp:param name="title" value="Login" />
+</jsp:include>
+
+
 <div class="container">
     <h1>Login:</h1>
 </div>
@@ -21,5 +18,5 @@
         <input type="submit" value="invia">
     </div>
 </form>
-</body>
-</html>
+
+<jsp:include page="/WEB-INF/views/footer.jsp" />

@@ -1,4 +1,6 @@
-package com.tum4world.tum4world.servlet;
+package com.tum4world.tum4world.controller.servlets;
+
+import com.turm4world.tum4world.model.User;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -9,7 +11,7 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("login.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/views/public/login.jsp").forward(request, response);
     }
 
     boolean validate(String username, String password) {
@@ -24,9 +26,15 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("login.jsp");
         } else {
             HttpSession s = request.getSession(true);
-            s.setAttribute("autenticato", true);
-            s.setAttribute("username", username);
-            response.sendRedirect("restricted");
+
+            User u = new User();
+            u.setTipo(User.Tipo.SIMPATIZZANTE);
+            u.setName("Pietro");
+
+            s.setAttribute("user", u);
+
+
+            response.sendRedirect("restricted/home");
         }
     }
 }

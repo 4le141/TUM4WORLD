@@ -1,4 +1,4 @@
-package com.tum4world.tum4world.filter;
+package com.tum4world.tum4world.controller.filters;
 
 import javax.servlet.*;
 import javax.servlet.annotation.*;
@@ -21,12 +21,15 @@ public class AuthorizationFilter implements Filter {
         HttpServletResponse resp = (HttpServletResponse) response;
 
         HttpSession session = req.getSession(false);
-
         String servletPath = req.getServletPath();
-        if(servletPath.startsWith("/pippo")){
-            resp.sendRedirect("login.jsp");
+
+        boolean isLoggedUser = session != null && session.getAttribute("user") != null;
+
+        if(!isLoggedUser && servletPath.startsWith("/restricted")){
+            resp.sendRedirect(req.getContextPath() + "/login");
             return;
         }
+
         chain.doFilter(request, response);
     }
 }

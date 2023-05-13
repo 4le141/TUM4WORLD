@@ -1,24 +1,20 @@
-<!DOCTYPE html>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Chi siamo</title>
-    <link rel="stylesheet" href="main.css">
-    <jsp:include page="header.jsp"/>
 
-</head>
-<body>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<jsp:include page="/WEB-INF/views/header.jsp" >
+    <jsp:param name="title" value="Chi siamo'" />
+</jsp:include>
+
 <div class="container">
     <h1> CHI SIAMO </h1>
 </div>
 <div class="container">
     <p class="containerImages">
-        <img src="images/macchina_foto_disegno.png" alt="Left Image" class="left" style="transform: rotate(10deg);">
+        <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png" alt="Left Image" class="left" style="transform: rotate(10deg);">
         <br>
-        <img src="images/macchina_foto_disegno.png" alt="Left Image" class="left" style="transform: rotate(-10deg);">
+        <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png" alt="Left Image" class="left" style="transform: rotate(-10deg);">
         <br>
-        <img src="images/macchina_foto_disegno.png" alt="Left Image" class="left" style="transform: rotate(10deg);">
+        <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png" alt="Left Image" class="left" style="transform: rotate(10deg);">
         <br>
     </p>
 
@@ -39,15 +35,13 @@
         l'associazione TUM4WORLD per gli Animali e a unirti a loro nella lotta per la difesa dei nostri amici a quattro
         zampe. <br> <br></p>
     <p class="containerImages">
-        <img src="images/macchina_foto_disegno.png" alt="Right Image" class="right" style="transform: rotate(-10deg);">
+        <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png" alt="Right Image" class="right" style="transform: rotate(-10deg);">
         <br>
-        <img src="images/macchina_foto_disegno.png" alt="Right Image" class="right" style="transform: rotate(10deg);">
+        <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png" alt="Right Image" class="right" style="transform: rotate(10deg);">
         <br>
-        <img src="images/macchina_foto_disegno.png" alt="Right Image" class="right" style="transform: rotate(-10deg);">
+        <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png" alt="Right Image" class="right" style="transform: rotate(-10deg);">
         <br>
     </p>
 </div>
 
-
-</body>
-</html>
+<jsp:include page="/WEB-INF/views/footer.jsp" />

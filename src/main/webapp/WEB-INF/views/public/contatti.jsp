@@ -1,12 +1,10 @@
-<!DOCTYPE html>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<head>
-    <meta charset="UTF-8">
-    <title>Contattaci!</title>
-    <link rel="stylesheet" href="main.css">
-    <jsp:include page="header.jsp"/>
-</head>
-<body>
+
+<jsp:include page="/WEB-INF/views/header.jsp" >
+    <jsp:param name="title" value="Contatti" />
+</jsp:include>
+
 <div class="info">
     <p>Ci puoi trovare in: Via dei ciliegi 45</p>
     <p> Ci puoi chiamare al: 335-789 6754</p>
@@ -32,11 +30,11 @@
         <textarea id="dettagli" name="dettagli" rows="10" cols="50" maxlength="250"></textarea><br>
         <div class="buttons">
             <input type="reset" id="reset" name="Reset" value="Reset">
-            <a href="src/main/webapp/invio confermato.html">
+            <a href="${pageContext.request.contextPath}/invioconfermato">
                 <input type="submit" value="Submit"/>
             </a>
         </div>
     </form>
 </div>
-</body>
-</html>
+
+<jsp:include page="/WEB-INF/views/footer.jsp" />
