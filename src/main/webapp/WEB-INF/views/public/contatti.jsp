@@ -17,7 +17,7 @@
         <input type="text" id="lname" name="lname"><br><br>
         <label for="email"> Inserisci la tua email:</label>
         <input type="email" id="email" name="email"><br><br>
-        <label for="combo">Motivo di contatto: </label><br>
+        <p>Motivo di contatto: </p><br>
         <input type="checkbox" id="reason1" name="reason1" value="Donazione">
         <label for="reason1">Vorrei fare una donazione</label><br>
         <input type="checkbox" id="reason2" name="reason2" value="Adozione">
@@ -26,7 +26,7 @@
         <label for="reason3"> Vorrei rendermi disponibile come volontario</label><br>
         <input type="checkbox" id="reason4" name="reason4" value="Altro">
         <label for="reason4"> Altro</label><br>
-        <label for="testo">Esplicita i dettagli del motivo di contatto (opzionale):</label><br>
+        <label for="dettagli">Esplicita i dettagli del motivo di contatto (opzionale):</label><br>
         <textarea id="dettagli" name="dettagli" rows="10" cols="50" maxlength="250"></textarea><br>
         <div class="buttons">
             <input type="reset" id="reset" name="Reset" value="Reset">
