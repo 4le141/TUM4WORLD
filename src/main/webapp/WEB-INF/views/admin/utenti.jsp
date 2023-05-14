@@ -1,9 +1,9 @@
 <jsp:include page="/WEB-INF/views/header.jsp" >
-    <jsp:param name="title" value="Attività 2" />
+    <jsp:param name="title" value="Utenti" />
 </jsp:include>
 
 <div class="content">
-    TODO 2
+    TODO UTENTI
 </div>
 
 <jsp:include page="/WEB-INF/views/footer.jsp" />

@@ -1,6 +1,6 @@
 package com.tum4world.tum4world.controller.servlets;
 
-import com.turm4world.tum4world.model.User;
+import com.tum4world.tum4world.model.User;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -23,12 +23,12 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         if (!validate(username, password)) {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("login");
         } else {
             HttpSession s = request.getSession(true);
 
             User u = new User();
-            u.setTipo(User.Tipo.SIMPATIZZANTE);
+            u.setTipo(User.Tipo.AMMINISTRATORE);
             u.setName("Pietro");
 
             s.setAttribute("user", u);

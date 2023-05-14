@@ -1,4 +1,4 @@
-package com.turm4world.tum4world.model;
+package com.tum4world.tum4world.model;
 
 public class User{
     public static enum Tipo {

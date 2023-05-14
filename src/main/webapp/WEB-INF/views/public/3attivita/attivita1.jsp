@@ -2,6 +2,8 @@
     <jsp:param name="title" value="Attività 1" />
 </jsp:include>
 
-TODO 1
+<div class="content">
+    TODO 1
+</div>
 
 <jsp:include page="/WEB-INF/views/footer.jsp" />

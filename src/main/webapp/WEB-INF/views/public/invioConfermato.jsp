@@ -4,6 +4,7 @@
     <jsp:param name="title" value="Invio confermato" />
 </jsp:include>
 
+<div class="content">
 <div> Invio confermato! La sua richiesta e' stata ricevuta, la contatteremo al piu' presto</div>
-
+</div>
 <jsp:include page="/WEB-INF/views/footer.jsp" />
