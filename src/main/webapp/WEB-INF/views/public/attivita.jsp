@@ -5,6 +5,9 @@
 
 <div class="content">
 <section class="attivita">
+  <div class="row">
+    <h1> ATTIVITA </h1>
+  </div>
 <div class="row">
   <div class="column" style="background-color:lightgray;">
     <a href="${pageContext.request.contextPath}/attivita/1">
