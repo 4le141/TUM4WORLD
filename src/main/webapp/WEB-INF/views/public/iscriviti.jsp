@@ -4,6 +4,7 @@
   <jsp:param name="title" value="Iscriviti" />
 </jsp:include>
 
-TODO
-
+<div class="content">
+  Iscriviti TODO
+</div>
 <jsp:include page="/WEB-INF/views/footer.jsp" />

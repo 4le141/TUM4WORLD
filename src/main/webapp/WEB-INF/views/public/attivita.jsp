@@ -2,6 +2,8 @@
   <jsp:param name="title" value="Attivita'" />
 </jsp:include>
 
+
+<div class="content">
 <section class="attivita">
 <div class="row">
   <div class="column" style="background-color:lightgray;">
@@ -27,5 +29,6 @@
   </div>
 </div>
 </section>
+</div>
 
 <jsp:include page="/WEB-INF/views/footer.jsp" />

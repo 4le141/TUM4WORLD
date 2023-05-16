@@ -4,6 +4,10 @@
   <jsp:param name="title" value="Home" />
 </jsp:include>
 
-RESTRICTED PAGE
+<div class="content">
+  TODO HOME
+</div>
 
 <jsp:include page="/WEB-INF/views/footer.jsp" />
+
+
