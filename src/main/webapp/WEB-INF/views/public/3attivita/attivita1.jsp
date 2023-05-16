@@ -3,7 +3,7 @@
 </jsp:include>
 
 <div class="content">
-    TODO 1 ciao by anna porcodio 3
+    TODO 1 ciao da fede
 </div>
 
 <jsp:include page="/WEB-INF/views/footer.jsp" />
