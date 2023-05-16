@@ -225,14 +225,6 @@ p.containerImages {
     transform: scale(0.9);
 }
 
-.layout_attivita{
-    align-items: center;
-    justify-content: center;
-    /* Take full size */
-    height: 100%;
-    width: 100%;
-}
-
 
 /* Create three equal columns that floats next to each other */
 .attivita .column {

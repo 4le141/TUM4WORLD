@@ -14,14 +14,14 @@
       <div ><img class="animazione" src="${pageContext.request.contextPath}/images/logo.png" alt="Prenditi cura dei cani" width="100%"></div>
     </a>
     <h2>Prenditi cura dei cani</h2>
-    <p>Diventa un volontario e aiutaci prenderci cura dei nostri amici cani. Avrai l'opportunit&#192 di aiutare cani randagi recuperati dalla nostra associazione a vivere una vita migliore</p>
+    <p>Diventa un volontario e aiutaci prenderci cura dei nostri amici cani. Avrai l'opportunit&#224 di aiutare cani randagi recuperati dalla nostra associazione a vivere una vita migliore</p>
   </div>
   <div class="column" style="background-color:lightgray;">
     <a href="${pageContext.request.contextPath}/attivita/2">
       <div ><img class="animazione" src="${pageContext.request.contextPath}/images/logo.png" alt="Prenditi cura dei gatti" width="100%"></div>
     </a>
     <h2>Prenditi cura dei gatti</h2>
-    <p>Diventa un volontario e aiutaci a prenderci cura dei nostri amici gatti. Avrai l'opportunit&#192 di aiutare gatti randagi recuperati dalla nostra associazione a vivere una vita migliore</p>
+    <p>Diventa un volontario e aiutaci a prenderci cura dei nostri amici gatti. Avrai l'opportunit&#224 di aiutare gatti randagi recuperati dalla nostra associazione a vivere una vita migliore</p>
   </div>
   <div class="column" style="background-color:lightgray;">
     <a href="${pageContext.request.contextPath}/attivita/3">

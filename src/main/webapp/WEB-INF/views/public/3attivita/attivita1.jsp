@@ -3,10 +3,10 @@
 </jsp:include>
 
 <div class="content">
-    <div class="layout_attivita">
         <img src="${pageContext.request.contextPath}/images/dimensioniattivita.jpg" alt="Image" width="500">
         <h2>Prenditi cura dei cani</h2>
-        <p style="align-content: center"></p>
+    <div class="row">
+        <p>Fai volontariato al Rifugio di Tum4World, dove abbiamo accolto tanti gatti che sono stati abbandonati o maltrattati dai loro padroni. Come volontario avrai l'opportunit&#224 di donare il tuo amore ai nostri amici cani che stanno cercando una nuova casa. Ci darai una mano a pulire i rifugi, dare da mangiare ai gatti e farli giocare, e aiuterai nella riabilitazione degli animali traumatizzati.</p>
     </div>
 </div>
 

@@ -5,11 +5,11 @@
 </jsp:include>
 
 <div class="content">
-
+    <section class="home">
     <div class="row">
         <h1> HOMEPAGE </h1>
     </div>
-    <img class="animazione" src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png"
+    <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png"
          alt="Description Image" style="max-width: 25%">
     <div class="row">
         <p>L'Associazione TUM4WORLD è una organizzazione di beneficenza,
@@ -20,19 +20,20 @@
     </div>
     <div class="row">
         <figure>
-            <img class="animazione" src="${pageContext.request.contextPath}/images/logo.png" alt="Logo Image"
+            <img src="${pageContext.request.contextPath}/images/logo.png" alt="Logo Image"
                  style="max-width: 20%">
             <figcaption>Il nostro logo</figcaption>
         </figure>
     </div>
     <div class="row">
-        <p> Per scaricare il nostro volantino
+        <p> Per scaricare il nostro volantino<br>
             <a href="${pageContext.request.contextPath}/pdf/volantino.pdf" download>
                 <button> clicca qui</button>
             </a>
 
         </p>
     </div>
+    </section>
 </div>
 
 <jsp:include page="/WEB-INF/views/footer.jsp"/>

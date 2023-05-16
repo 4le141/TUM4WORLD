@@ -3,7 +3,12 @@
 <jsp:include page="/WEB-INF/views/header.jsp">
     <jsp:param name="title" value="Contatti"/>
 </jsp:include>
+
 <div class="content">
+    <section class="contatti">
+    <div class="row">
+        <h1> CONTATTI</h1>
+    </div>
     <div class="info">
         <p>Ci puoi trovare in: Via dei ciliegi 45</p>
         <p> Ci puoi chiamare al: 335-789 6754</p>
@@ -34,6 +39,7 @@
             </div>
         </form>
     </div>
+    </section>
 </div>
 
 
