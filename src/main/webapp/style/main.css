@@ -117,6 +117,7 @@ p {
 
 h1 {
     text-align: center;
+    font-family: "Calibri";
     color: #56cc75;
     padding: 10px;
     max-width: 500px;
@@ -224,6 +225,15 @@ p.containerImages {
 .animazione:hover {
     transform: scale(0.9);
 }
+
+.layout_attivita{
+    align-items: center;
+    justify-content: center;
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+}
+
 
 /* Create three equal columns that floats next to each other */
 .attivita .column {
