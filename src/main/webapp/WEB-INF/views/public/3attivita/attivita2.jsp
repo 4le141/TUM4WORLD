@@ -3,7 +3,7 @@
 </jsp:include>
 
 <div class="content">
-    TODO 2
+    TODO TEST
 </div>
 
 <jsp:include page="/WEB-INF/views/footer.jsp" />

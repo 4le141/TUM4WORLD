@@ -35,7 +35,6 @@ footer {
 .headerlogo img {
     width: 65px;
     height: 65px;
-    max-width: none;
     filter: invert(1);
 }
 
@@ -223,8 +222,17 @@ p.containerImages {
     margin-right: 30px;
 }
 .animazione:hover {
-    transform: scale(1.2);
+    transform: scale(0.9);
 }
+
+.layout_attivita{
+    align-items: center;
+    justify-content: center;
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+}
+
 
 /* Create three equal columns that floats next to each other */
 .attivita .column {
@@ -339,4 +347,19 @@ img.footerlinkicon {
     padding-left: 50px;
     padding-right: 50px;
     color: #56cc75;
+}
+.form, textarea{
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+.info{
+    color: #ffffff;
+    text-align: center;
+    line-height: 2;
+    font-size: 18px
+
 }
