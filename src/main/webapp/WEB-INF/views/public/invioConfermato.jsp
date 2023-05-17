@@ -5,7 +5,6 @@
 </jsp:include>
 
 <div class="content">
-    <%-- Ricevi i dati dal modulo --%>
     <div class="row">
         <h1>Il modulo è stato inviato con successo!</h1>
     </div>
