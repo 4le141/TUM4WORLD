@@ -160,7 +160,7 @@ button {
 }
 
 textarea {
-    resize: none;
+    resize: vertical;
 }
 
 .login-form {
@@ -348,10 +348,59 @@ img.footerlinkicon {
     border-radius: 5px;
     background-color: #f2f2f2;
 }
-.info{
-    color: #ffffff;
+.info {
+    color: black;
     text-align: center;
     line-height: 2;
-    font-size: 18px
+    font-size: 18px;
+    background-color: #56cc75;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 500px;
 
+}
+.info p {
+    margin: 0;
+    padding: 5px 0;
+}
+.info p:first-child {
+    font-weight: bold;
+}
+.info p:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+.info p:nth-child(even) {
+    background-color: #f9f9f9;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+.buttons input[type="reset"],
+.buttons input[type="submit"] {
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    background-color: #56cc75;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
 }

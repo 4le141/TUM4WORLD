@@ -9,7 +9,7 @@
     <div class="row">
         <h1> CONTATTI</h1>
     </div>
-    <div class="info">
+    <div class="info" style="text-align: center">
         <p>Ci puoi trovare in: Via dei ciliegi 45</p>
         <p> Ci puoi chiamare al: 335-789 6754</p>
     </div>
@@ -21,20 +21,20 @@
             <input type="text" id="lname" name="lname"><br><br>
             <label for="email"> Inserisci la tua email:</label>
             <input type="email" id="email" name="email"><br><br>
-            <p>Motivo di contatto: </p><br>
+            <p>Motivo di contatto: </p><br><br>
             <input type="radio" id="reason1" name="reason" value="Donazione">
-            <label for="reason1">Vorrei fare una donazione</label><br>
+            <b>Vorrei fare una donazione</b> <br><br>
             <input type="radio" id="reason2" name="reason" value="Adozione">
-            <label for="reason2"> Vorrei fare un'adozione</label><br>
+            <b>Vorrei fare un'adozione</b><br><br>
             <input type="radio" id="reason3" name="reason" value="Volontario">
-            <label for="reason3"> Vorrei rendermi disponibile come volontario</label><br>
+            <b>Vorrei rendermi disponibile come volontario</b><br><br>
             <input type="radio" id="reason4" name="reason" value="Altro">
-            <label for="reason4"> Altro</label><br>
+            <b>Altro</b><br><br>
             <label for="dettagli">Esplicita i dettagli del motivo di contatto (opzionale):</label><br>
             <textarea id="dettagli" name="dettagli" rows="10" cols="50" maxlength="250"></textarea><br>
             <div class="buttons">
                 <input type="reset" id="reset" name="Reset" value="Reset">
-                <input type="submit" value="Invia">
+                <input type="submit" value="Invia" class="">
                 </a>
             </div>
         </form>
