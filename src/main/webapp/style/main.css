@@ -36,6 +36,7 @@ footer {
     width: 65px;
     height: 65px;
     filter: invert(1);
+    max-width: none;
 }
 
 .headertitle {
@@ -245,7 +246,7 @@ p.containerImages {
 }
 
 .footer{
-    height: 420px;
+    height: 360px;
     display: flex;
     background-color: #56cc75;
     color: white;
@@ -260,7 +261,7 @@ p.containerImages {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 15%;
+    padding-top: 3%;
 }
 
 .footeraddress{
@@ -272,11 +273,11 @@ p.containerImages {
 }
 
 .footercontent div div{
-    padding-bottom: 10px;
+    padding-bottom: 3px;
 }
 
 .footercontent div div.footertitle{
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     font-size: 30px;
     text-transform: uppercase;
 }
@@ -329,13 +330,20 @@ img.footerlinkicon {
     margin: 15px;
 }
 
+.footerlogo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .quotesection{
     background: white;
-    height: 200px;
+    height: 170px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 35px;
+    font-size: 25px;
     padding-left: 50px;
     padding-right: 50px;
     color: #56cc75;
@@ -381,6 +389,7 @@ label {
 }
 input[type="text"],
 input[type="email"],
+input[type="password"],
 textarea {
     width: 100%;
     padding: 8px;
@@ -389,6 +398,16 @@ textarea {
     border-radius: 4px;
     margin-bottom: 10px;
 }
+
+input[type="date"]{
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
     margin-right: 5px;
@@ -400,7 +419,131 @@ input[type="checkbox"] {
     cursor: pointer;
     background-color: #56cc75;
     color: white;
-    border: none;
     padding: 10px 20px;
     border-radius: 50px;
+}
+
+.signup-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signupwrapper {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 4% 0 5% 0;
+    margin-bottom: 60px;
+}
+
+.signup-form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.signup-form div, .signup-form div input {
+    width: 100%;
+    text-align: start;
+}
+
+.signup-form div.fullnamefield input{
+    width:45%;
+}
+
+div.inputfield{
+    display:flex;
+}
+
+div.fullnamefield {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-label{
+    margin-bottom: 10px;
+    margin-top: 3px;
+    font-weight:400;
+}
+
+.usermode{
+    width: 100%;
+    margin: 1% 0 2% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.usermode label {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    justify-content: center;
+}
+
+
+.usermode input[type="radio"]{
+    display:none;
+}
+
+.usermode input[type="radio"]+label{
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    height: 40px;
+    transition: 0.2s;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.usermode input[type="radio"]:checked+label{
+    border: 2px solid #56cc75;
+    color: #56cc75;
+}
+
+div.buttonrow {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+div.buttonrow input.signupsubmit, div.buttonrow input.signupreset{
+    width: 25%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+div.buttonrow input.signupsubmit{
+    background-color: #56cc75;
+    color:white;
+    width:72%;
+    border: 2px solid transparent;
+}
+
+div.buttonrow input.signupreset{
+    background-color: white;
+    border: 2px solid #ccc;
+}
+
+div.buttonrow input.signupsubmit:hover{
+    background-color: #a6e1b5;
+    color:white;
+}
+
+div.buttonrow input.signupreset:hover{
+    background-color: #ccc;
+}
+
+.form-hint{
+    font-size: 13px;
+    color: #595959;
+    font-weight: 200;
 }

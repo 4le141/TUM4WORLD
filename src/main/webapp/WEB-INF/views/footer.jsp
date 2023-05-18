@@ -21,14 +21,16 @@
             <div class="footerlink"><img class="footerlinkicon" src="${pageContext.request.contextPath}/images/instagramlogo.png" alt="Instagram Logo">Instagram</div>
             <div class="footerlink"><img class="footerlinkicon" src="${pageContext.request.contextPath}/images/youtubelogo.png" alt="Youtube Logo">Youtube</div>
         </div>
-
-    </div>
-    <div class="footerseparator"></div>
-    <div class="footerbottom">
-        <img src="${pageContext.request.contextPath}/images/logo.png" alt="Header Logo"> Tum4World
     </div>
 
+    <div class="footerlogo">
+        <div class="footerseparator"></div>
+        <div class="footerbottom">
+            <img src="${pageContext.request.contextPath}/images/logo.png" alt="Header Logo"> Tum4World
+        </div>
     </div>
+
+
 </div>
 </body>
 </html>
