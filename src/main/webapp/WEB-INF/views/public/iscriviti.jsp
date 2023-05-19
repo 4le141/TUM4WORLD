@@ -5,7 +5,6 @@
 </jsp:include>
 
   <script>
-
     const regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
     function validateForm() {
 
@@ -23,7 +22,15 @@
   <div class="row">
     <h1>Iscriviti:</h1>
   </div>
-
+  <style>
+    .signup-content{
+      flex: 1 0 auto;
+      background-image: url('images/pet.jpg');
+      background-repeat: repeat;
+      background-attachment: scroll;
+      background-size: cover;
+    }
+  </style>
     <div class="signupwrapper">
       <form class="signup-form" onsubmit="return validateForm()" name="signup-form" method="post" action="./signupservlet">
 

@@ -147,6 +147,10 @@ button {
 
 .content {
     flex: 1 0 auto;
+    background-image: url('images/pet.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .row {
@@ -390,13 +394,14 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"],
-textarea {
+textarea,select {
     width: 100%;
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 10px;
+    margin-right: 5px;
 }
 
 input[type="date"]{
@@ -408,8 +413,7 @@ input[type="date"]{
     margin-bottom: 10px;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+input[type="radio"]{
     margin-right: 5px;
 }
 .buttons input[type="reset"],
@@ -427,6 +431,7 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .signupwrapper {
@@ -546,4 +551,8 @@ div.buttonrow input.signupreset:hover{
     font-size: 13px;
     color: #595959;
     font-weight: 200;
+}
+.form{
+    background-image: url("kitten-g29371f95d_1920.jpg");
+    background-size: cover;
 }
