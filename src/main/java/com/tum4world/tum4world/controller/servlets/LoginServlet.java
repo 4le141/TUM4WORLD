@@ -30,11 +30,8 @@ public class LoginServlet extends HttpServlet {
             User u = new User();
             u.setTipo(User.Tipo.AMMINISTRATORE);
             u.setName("Pietro");
-
             s.setAttribute("user", u);
-
-
-            response.sendRedirect("restricted/home");
+            response.sendRedirect("./admin/home");
         }
     }
 }

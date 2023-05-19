@@ -3,7 +3,7 @@
 </jsp:include>
 
 <div class="content">
-    TODO UTENTI
+    TODO UTENTI->fare collegamento a DB
 </div>
 
 <jsp:include page="/WEB-INF/views/footer.jsp" />

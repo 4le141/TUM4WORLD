@@ -1,0 +1,13 @@
+/*ho aggiunto questo file css perchè è richiesto di avere un css diverso per ogni profile utente, per ora la
+la grafica è tutta uguale, poi decideremo come cambiarla*/
+button {
+    background-color: #56cc75;
+    color: white;
+    border: 2px solid darkcyan;
+    padding: 30px 30px;
+    border-radius: 20px;
+    margin: 20px;
+}
+.content{
+    background-color: darkcyan;
+}
