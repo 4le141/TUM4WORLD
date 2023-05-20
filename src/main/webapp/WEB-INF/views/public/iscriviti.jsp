@@ -27,28 +27,28 @@
 
         <label for="firstname" class="form-label">Nome</label>
         <div class="fullnamefield">
-          <input type="text" name="firstname" id="firstname" placeholder="Nome">
-          <input type="text" name="lastname" id="lastname" placeholder="Cognome">
+          <input type="text" name="firstname" id="firstname" placeholder="Nome" required>
+          <input type="text" name="lastname" id="lastname" placeholder="Cognome" required>
         </div>
 
         <label for="username" class="form-label">Nome Utente</label>
         <div class="inputfield">
-          <input type="text" name="username" id="username">
+          <input type="text" name="username" id="username" required>
         </div>
 
         <label for="birthday" class="form-label">Data di Nascita</label>
         <div class="inputfield">
-          <input type="date" name="birthday" id="birthday">
+          <input type="date" name="birthday" id="birthday" required>
         </div>
 
         <label for="email" class="form-label">Email</label>
         <div class="inputfield">
-          <input type="text" name="email" id="email">
+          <input type="email" name="email" id="email" required>
         </div>
 
         <label class="form-label">Iscriviti Come:</label>
         <div class="usermode">
-          <input type="radio" name="usermode" id="simpatizzante" value="simpatizzante">
+          <input type="radio" name="usermode" id="simpatizzante" value="simpatizzante" checked>
           <label for="simpatizzante">
             Simpatizzante
           </label>
@@ -65,7 +65,7 @@
 
         <label for="password" class="form-label">Password</label>
         <div class="inputfield">
-          <input type="password" name="password" id="password">
+          <input type="password" name="password" id="password" required>
         </div>
         <div class="form-hint">La password deve essere lunga 8 caratteri e deve contenere almeno:<br>
           - un carattere numerico<br>

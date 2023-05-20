@@ -25,6 +25,18 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("password");
         String usermode = request.getParameter("usermode");
 
+        User u = new User();
+        u.setUsername(username);
+        u.setLastname(lastname);
+        u.setBirthday(birthday);
+        u.setPassword(password);
+        u.setEmail(email);
+        User.UserMode umode = User.UserMode.valueOf(usermode.toUpperCase());
+        u.setUserMode(umode);
+        u.setPhone(phone);
+        u.setFirstname(firstname);
+        insertUser(u);
+
         response.sendRedirect("invioconfermato");
     }
 
