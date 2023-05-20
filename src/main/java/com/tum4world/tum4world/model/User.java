@@ -1,18 +1,18 @@
 package com.tum4world.tum4world.model;
 
-public class User{
-    public static enum Tipo {
-        SIMPATIZZANTE,
-        ADERENTE,
-        AMMINISTRATORE
+public class User {
+    public enum UserMode {
+        SIMPATIZZANTE, ADERENTE, AMMINISTRATORE
     }
 
     private String username;
     private String password;
-
-    private String name;
-
-    private Tipo tipo;
+    private String firstname;
+    private String lastname;
+    private String birthday;
+    private String email;
+    private String phone;
+    private UserMode userMode;
 
     public String getUsername() {
         return username;
@@ -30,19 +30,51 @@ public class User{
         this.password = password;
     }
 
-    public Tipo getTipo() {
-        return tipo;
+    public UserMode getUserMode() {
+        return userMode;
     }
 
-    public void setTipo(Tipo tipo) {
-        this.tipo = tipo;
+    public void setUserMode(UserMode userMode) {
+        this.userMode = userMode;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

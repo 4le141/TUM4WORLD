@@ -35,7 +35,7 @@
         <a href="${pageContext.request.contextPath}/attivita">Attività</a>
         <a href="${pageContext.request.contextPath}/contatti">Contatti</a>
         <c:if test="${isUserLogged }">
-            <c:set var="userType" value="${sessionScope.user.tipo}"/>
+            <c:set var="userType" value="${sessionScope.user.userMode}"/>
 
             <c:choose>
                 <c:when test="${userType eq 'SIMPATIZZANTE'}">

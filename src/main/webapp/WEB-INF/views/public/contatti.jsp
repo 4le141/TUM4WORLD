@@ -3,16 +3,8 @@
 <jsp:include page="/WEB-INF/views/header.jsp">
     <jsp:param name="title" value="Contatti"/>
 </jsp:include>
-<style>
-    .content{
-        flex: 1 0 auto;
-        background-image: url('${pageContext.request.contextPath}images/pet.jpg');
-        background-repeat: repeat;
-        background-attachment: scroll;
-        background-size: cover;
-    }
-</style>
-<div class="content">
+
+<div class="content backgroundImage">
     <section class="contatti">
     <div class="row">
         <h1> CONTATTI</h1>

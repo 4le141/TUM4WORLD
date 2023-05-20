@@ -24,10 +24,7 @@
         <servlet-name>InvioConfermatoPage</servlet-name>
         <jsp-file>/WEB-INF/views/public/invioConfermato.jsp</jsp-file>
     </servlet>
-    <servlet>
-        <servlet-name>IscrivitiPage</servlet-name>
-        <jsp-file>/WEB-INF/views/public/iscriviti.jsp</jsp-file>
-    </servlet>
+
     <servlet>
         <servlet-name>IscrizioneConfermataPage</servlet-name>
         <jsp-file>/WEB-INF/views/public/iscrizioneConfermata.jsp</jsp-file>
@@ -108,10 +105,7 @@
         <servlet-name>InvioConfermatoPage</servlet-name>
         <url-pattern>/invioconfermato</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>IscrivitiPage</servlet-name>
-        <url-pattern>/iscriviti</url-pattern>
-    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>IscrizioneConfermataPage</servlet-name>
         <url-pattern>/iscrizioneconfermata</url-pattern>

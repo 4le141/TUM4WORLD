@@ -18,21 +18,12 @@
     }
   </script>
 
-<div class="signup-content">
+<div class="signup-content backgroundImage" >
   <div class="row">
     <h1>Iscriviti:</h1>
   </div>
-  <style>
-    .signup-content{
-      flex: 1 0 auto;
-      background-image: url('${pageContext.request.contextPath}images/pet.jpg');
-      background-repeat: repeat;
-      background-attachment: scroll;
-      background-size: cover;
-    }
-  </style>
     <div class="signupwrapper">
-      <form class="signup-form" onsubmit="return validateForm()" name="signup-form" method="post" action="./signupservlet">
+      <form class="signup-form" onsubmit="return validateForm()" name="signup-form" method="post" action="./iscriviti">
 
         <label for="firstname" class="form-label">Nome</label>
         <div class="fullnamefield">
