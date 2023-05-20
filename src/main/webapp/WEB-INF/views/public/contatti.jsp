@@ -6,7 +6,7 @@
 <style>
     .content{
         flex: 1 0 auto;
-        background-image: url('images/pet.jpg');
+        background-image: url('${pageContext.request.contextPath}images/pet.jpg');
         background-repeat: repeat;
         background-attachment: scroll;
         background-size: cover;
