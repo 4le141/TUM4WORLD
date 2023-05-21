@@ -567,7 +567,7 @@ div.buttonrow input.signupreset:hover {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-image: url('../images/pet.jpg');
+    background-image: url('../images/background.png');
 }
 #popup {
     display: none; /* Nascondi il popup all'avvio */
