@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<c:set var="isUserLogged" value="${not empty sessionScope.user}"/>
+<c:set var="isUserLogged" value="${not empty sessionScope.username}"/>
 
 <html lang="it">
 <head>
@@ -23,7 +23,7 @@
                     <a href="${pageContext.request.contextPath}/iscriviti">Iscriviti</a>
                 </c:if>
                 <c:if test="${isUserLogged}">
-                    <div style="color: white"> Benvenuto ${sessionScope.user.name} </div>
+                    <div style="color: white"> Benvenuto ${sessionScope.user.username} </div>
                     <a href="${pageContext.request.contextPath}/logout">Logout</a>
                 </c:if>
             </div>
