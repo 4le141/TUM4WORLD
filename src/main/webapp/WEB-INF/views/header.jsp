@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<c:set var="isUserLogged" value="${not empty sessionScope.username}"/>
+<c:set var="isUserLogged" value="${not empty sessionScope.user}"/>
 
 <html lang="it">
 <head>
@@ -10,6 +10,7 @@
     <title>Tum4World - ${param.title} </title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/style/main.css">
     <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/images/logo.png">
+    <script src="${pageContext.request.contextPath}/js/main.js" ></script>
 </head>
 <body>
 <div class="container">

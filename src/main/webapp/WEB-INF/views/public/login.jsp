@@ -9,8 +9,8 @@
     </div>
     <form class="login-form" method="post" action="./login">
         <div class="row">
-            <p>Username: <input type="text" name="username" id="username"> <br>
-                Password: <input type="password" name="password" id="password">
+            <p>Username: <input type="text" name="username" id="username" required> <br>
+                Password: <input type="password" name="password" id="password" required>
             </p>
         </div>
         <div class="row">

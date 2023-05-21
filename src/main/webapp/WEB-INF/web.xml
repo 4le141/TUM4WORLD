@@ -43,6 +43,10 @@
     </servlet>
 
     <servlet>
+        <servlet-name>RestrictedHome</servlet-name>
+        <jsp-file>/WEB-INF/views/restricted/home.jsp</jsp-file>
+    </servlet>
+    <servlet>
         <servlet-name>viewProfile</servlet-name>
         <jsp-file>/WEB-INF/views/restricted/viewProfile.jsp</jsp-file>
     </servlet>
@@ -126,8 +130,12 @@
 
 
     <servlet-mapping>
+        <servlet-name>RestrictedHome</servlet-name>
+        <url-pattern>/restricted/home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>viewProfile</servlet-name>
-        <url-pattern>/restricted/viewProfile</url-pattern>
+        <url-pattern>/restricted/profilo</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>DonaRestricted</servlet-name>
@@ -135,7 +143,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>IscrivitiAttivitaRestricted</servlet-name>
-        <url-pattern>/restricted/iscrivitiAttivita</url-pattern>
+        <url-pattern>/restricted/iscriviti</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Aderente</servlet-name>
@@ -152,7 +160,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>StatisticheVisite</servlet-name>
-        <url-pattern>/admin/statisticheVisite</url-pattern>
+        <url-pattern>/admin/statistiche</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>UtentiAdmin</servlet-name>

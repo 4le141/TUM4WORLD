@@ -50,11 +50,16 @@
 
 <script>
     window.addEventListener('load', function () {
-        var popup = document.getElementById('popup');
-        popup.style.display = 'block'; // Mostra il popup quando la pagina è completamente caricata
+        let popup = document.getElementById('popup')
+        if(getCookie("cookieAccepted") !== "true"){
+            popup.style.display = 'block'; // Mostra il popup quando la pagina è completamente caricata
+        }
     });
+    let btnAccept = document.getElementById('btnAccept')
     btnAccept.addEventListener('click', function () {
+        let popup = document.getElementById('popup')
         popup.style.display = 'none'; // Nascondi il popup quando viene cliccato "Accetta"
+        document.cookie = "cookieAccepted=true; path=/";
     });
 
 </script>

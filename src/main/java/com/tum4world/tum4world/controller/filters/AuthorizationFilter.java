@@ -1,5 +1,7 @@
 package com.tum4world.tum4world.controller.filters;
 
+import com.tum4world.tum4world.model.User;
+
 import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.HttpServletRequest;
@@ -24,10 +26,26 @@ public class AuthorizationFilter implements Filter {
         String servletPath = req.getServletPath();
 
         boolean isLoggedUser = session != null && session.getAttribute("user") != null;
+        User user = isLoggedUser ? (User)session.getAttribute("user") : null;
 
-        if(!isLoggedUser && servletPath.startsWith("/restricted")){
+        if(servletPath.startsWith("/restricted") && (user == null || user.getUserMode() == User.UserMode.AMMINISTRATORE)){
             resp.sendRedirect(req.getContextPath() + "/login");
             return;
+        }
+        else if(servletPath.startsWith("/admin") && (user == null || user.getUserMode() != User.UserMode.AMMINISTRATORE)){
+            resp.sendRedirect(req.getContextPath() + "/login");
+            return;
+        }
+        else if(servletPath.equals("/login") && user != null){
+            switch (user.getUserMode()){
+                case AMMINISTRATORE:
+                    resp.sendRedirect("admin/home");
+                    return;
+                case ADERENTE:
+                case SIMPATIZZANTE:
+                    resp.sendRedirect("restricted/home");
+                    return;
+            }
         }
 
         chain.doFilter(request, response);

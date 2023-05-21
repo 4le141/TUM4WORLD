@@ -1,4 +1,4 @@
-package com.tum4world.tum4world.controller;
+package com.tum4world.tum4world.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

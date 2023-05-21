@@ -1,6 +1,7 @@
 package com.tum4world.tum4world.controller.servlets;
 
 import com.tum4world.tum4world.model.User;
+import com.tum4world.tum4world.model.UserService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -9,6 +10,13 @@ import java.io.IOException;
 
 @WebServlet(name = "RegisterServlet", value = "/iscriviti")
 public class RegisterServlet extends HttpServlet {
+    private UserService userService;
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        userService = new UserService();
+    }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/views/public/iscriviti.jsp").forward(request, response);
@@ -35,12 +43,14 @@ public class RegisterServlet extends HttpServlet {
         u.setUserMode(umode);
         u.setPhone(phone);
         u.setFirstname(firstname);
-        insertUser(u);
 
+        if(userService.userNameAlreadyExists(u.getUsername())){
+            request.setAttribute("error", true);
+            doGet(request, response);
+            return;
+        }
+        userService.insertUser(u);
         response.sendRedirect("invioconfermato");
     }
 
-    private void insertUser(User user) {
-
-    }
 }
