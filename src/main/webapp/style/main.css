@@ -134,6 +134,7 @@ button {
     border: none;
     padding: 10px 20px;
     border-radius: 50px;
+    margin: 2%;
 }
 
 .container {
@@ -579,3 +580,22 @@ div.buttonrow input.signupreset:hover {
     border: 1px solid black; /* Bordo del popup */
     padding: 10px; /* Spaziatura interna */
 }
+#dashboard {
+    width: 300px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+#welcome {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+
