@@ -568,3 +568,14 @@ div.buttonrow input.signupreset:hover {
     background-size: cover;
     background-image: url('../images/pet.jpg');
 }
+#popup {
+    display: none; /* Nascondi il popup all'avvio */
+    position: fixed;
+    bottom: 20px; /* Regola la posizione verticale */
+    left: 20px; /* Regola la posizione orizzontale */
+    width: 500px; /* Regola la larghezza del popup */
+    height: 290px; /* Regola l'altezza del popup */
+    background-color: white; /* Sfondo del popup */
+    border: 1px solid black; /* Bordo del popup */
+    padding: 10px; /* Spaziatura interna */
+}
