@@ -3,7 +3,7 @@
 </jsp:include>
 
 <div class="content">
-    <h1>Profile</h1>
+    <h1>Il tuo profilo</h1>
     <label>
         <p>Nome utente: ${sessionScope.user.username}
         </p>

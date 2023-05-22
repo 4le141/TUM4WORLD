@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="buttonrow">
-                    <input class="signupsubmit" type="submit" value="Iscriviti">
+                    <input class="signupsubmit" type="submit" value="Invia">
                     <input class="signupreset" type="reset" value="Reset">
                 </div>
             </form>
