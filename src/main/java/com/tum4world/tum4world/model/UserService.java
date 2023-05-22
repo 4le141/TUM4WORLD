@@ -1,9 +1,8 @@
 package com.tum4world.tum4world.model;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -79,6 +78,18 @@ public class UserService {
         } catch (Exception ex) {
             ex.printStackTrace();
             users.add(user);
+        }
+    }
+    public static void insertDonazione(User user, int dona) {
+        try (Connection conn = DatabaseUtils.getConnection();) {
+            PreparedStatement ps = conn.prepareStatement("INSERT INTO DONAZIONI values (?,?,?)");
+            ps.setString(1, user.getUsername());
+            ps.setInt(2, dona);
+            ps.setTimestamp(3,Timestamp.valueOf(LocalDate.now().atStartOfDay()));
+
+            ps.executeUpdate();
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
     }
 

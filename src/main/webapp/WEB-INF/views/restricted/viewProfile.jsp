@@ -3,12 +3,23 @@
 </jsp:include>
 
 <div class="content">
-    <form action="./servletviewprofile" method="GET">
-        <h2>Profile</h2>
-        <p>Username: <%= request.getParameter("username") %>
+    <h1>Profile</h1>
+    <label>
+        <p>Nome utente: ${sessionScope.user.username}
         </p>
-        <p>Name: <%= request.getParameter("name") %>
+        <p>Nome: ${sessionScope.user.firstname}
         </p>
+        <p>Cognome: ${sessionScope.user.lastname}
+        </p>
+        <p>Data di nascita: ${sessionScope.user.birthday}
+        </p>
+        <p>Email: ${sessionScope.user.email}
+        </p>
+        <p>Numero di Telefono: ${sessionScope.user.phone}
+        </p>
+        <p>Iscritto al nostro sito come: ${sessionScope.user.userMode}
+        </p>
+    </label>
 </div>
 
 <jsp:include page="/WEB-INF/views/footer.jsp"/>

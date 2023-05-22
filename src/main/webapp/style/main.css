@@ -395,12 +395,12 @@ img.footerlinkicon {
     background-color: #f9f9f9;
 }
 
+
 label {
     display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+    text-align: left;
+    margin-bottom: 10px;
 }
-
 input[type="text"],
 input[type="email"],
 input[type="password"],

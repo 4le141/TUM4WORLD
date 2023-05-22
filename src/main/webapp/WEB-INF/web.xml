@@ -43,6 +43,10 @@
     </servlet>
 
     <servlet>
+        <servlet-name>RestrictedDonaConfermataPage</servlet-name>
+        <jsp-file>/WEB-INF/views/restricted/donazioneConfermata.jsp</jsp-file>
+    </servlet>
+    <servlet>
         <servlet-name>RestrictedHome</servlet-name>
         <jsp-file>/WEB-INF/views/restricted/home.jsp</jsp-file>
     </servlet>
@@ -50,10 +54,7 @@
         <servlet-name>viewProfile</servlet-name>
         <jsp-file>/WEB-INF/views/restricted/viewProfile.jsp</jsp-file>
     </servlet>
-    <servlet>
-        <servlet-name>DonaRestricted</servlet-name>
-        <jsp-file>/WEB-INF/views/restricted/dona.jsp</jsp-file>
-    </servlet>
+
     <servlet>
         <servlet-name>IscrivitiAttivitaRestricted</servlet-name>
         <jsp-file>/WEB-INF/views/restricted/iscrivitiAttivita.jsp</jsp-file>
@@ -130,6 +131,10 @@
 
 
     <servlet-mapping>
+        <servlet-name>RestrictedDonaConfermataPage</servlet-name>
+        <url-pattern>/restricted/donazioneconfermata</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>RestrictedHome</servlet-name>
         <url-pattern>/restricted/home</url-pattern>
     </servlet-mapping>
@@ -137,10 +142,7 @@
         <servlet-name>viewProfile</servlet-name>
         <url-pattern>/restricted/profilo</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>DonaRestricted</servlet-name>
-        <url-pattern>/restricted/dona</url-pattern>
-    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>IscrivitiAttivitaRestricted</servlet-name>
         <url-pattern>/restricted/iscriviti</url-pattern>
