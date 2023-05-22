@@ -2,8 +2,10 @@ package com.tum4world.tum4world.model;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.math.BigDecimal;
 import java.sql.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -80,12 +82,12 @@ public class UserService {
             users.add(user);
         }
     }
-    public static void insertDonazione(User user, int dona) {
+    public static void insertDonazione(User user,  BigDecimal dona) {
         try (Connection conn = DatabaseUtils.getConnection();) {
-            PreparedStatement ps = conn.prepareStatement("INSERT INTO DONAZIONI values (?,?,?)");
-            ps.setString(1, user.getUsername());
-            ps.setInt(2, dona);
-            ps.setTimestamp(3,Timestamp.valueOf(LocalDate.now().atStartOfDay()));
+            PreparedStatement ps = conn.prepareStatement("INSERT INTO DONATIONS values (?,?,?)");
+            ps.setBigDecimal(1, dona);
+            ps.setString(2, user.getUsername());
+            ps.setTimestamp(3,Timestamp.valueOf(LocalDateTime.now()));
 
             ps.executeUpdate();
         } catch (Exception ex) {
