@@ -9,34 +9,71 @@
     <div class="row">
         <h1> CONTATTI</h1>
     </div>
-    <div class="info" style="text-align: center">
-        <p>Ci puoi trovare in: Via dei ciliegi 45</p>
-        <p> Ci puoi chiamare al: 335-789 6754</p>
-    </div>
-    <div class="form">
-        <form class="contacts" action="./sendmailservlet" method="post">
-            <%--@declare id="motivazione"--%><label for="fname">Inserisci il tuo nome:</label>
-            <input type="text" id="fname" name="fname" required><br><br>
-            <label for="lname">Inserisci il cognome:</label>
-            <input type="text" id="lname" name="lname" required><br><br>
-            <label for="email"> Inserisci la tua email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="motivazione">Motivo di contatto: </label>
-            <select name="reason" id="reason" required>
-                <option value="donazione">Vorrei fare una donazione</option>
-                <option value="adozione">Vorrei adottare un amico a 4 zampe</option>
-                <option value="volontario">Vorrei rendermi disponibile come volontario</option>
-                <option value="altro">Altro</option>
-            </select><br><br>
-            <label for="dettagli">Esplicita i dettagli del motivo di contatto (opzionale):</label><br>
-            <textarea id="dettagli" name="dettagli" rows="10" cols="50" maxlength="250"></textarea><br>
-            <div class="buttons">
-                <input type="reset" id="reset" name="Reset" value="Reset">
-                <input type="submit" value="Invia" class="">
-                </a>
+
+    <div class="contactsmain">
+        <div class="contactsinfo">
+            <div class="contactsaddress">
+                <img src="${pageContext.request.contextPath}/images/addresslogo.png" alt="Address Icon">
+                <div class="contactstitle">
+                    La nostra Sede
+                </div>
+                <div>
+                    Piazza Barone, 110<br>
+                    24000 Roma
+                </div>
             </div>
-        </form>
+            <div class="contactsphone">
+                <img src="${pageContext.request.contextPath}/images/phonelogo.png" alt="Phone Logo">
+                <div class="contactstitle">
+                    Chiamaci!
+                </div>
+                <div style="font-size: 30px">
+                    335-789 6754
+                </div>
+            </div>
+        </div>
+
+        <div class="contactswrapper">
+
+            <div class="contactstitle">
+                Scrivici!
+            </div>
+            <form class="signup-form" action="./sendmailservlet" method="post">
+
+                <label for="firstname" class="form-label">Nome</label>
+                <div class="fullnamefield">
+                    <input type="text" name="firstname" id="firstname" placeholder="Nome" required>
+                    <input type="text" name="lastname" id="lastname" placeholder="Cognome" required>
+                </div>
+
+                <label for="email" class="form-label">Email</label>
+                <div class="inputfield">
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <label for="reason" class="form-label">Motivo di contatto </label>
+                <div class="inputfield">
+                    <select name="reason" id="reason" required>
+                        <option value="donazione">Vorrei fare una donazione</option>
+                        <option value="adozione">Vorrei adottare un amico a 4 zampe</option>
+                        <option value="volontario">Vorrei rendermi disponibile come volontario</option>
+                        <option value="altro">Altro</option>
+                    </select>
+                </div>
+
+                <label for="dettagli">Dettagli (opzionale):</label>
+                <div class="inputfield">
+                    <textarea id="dettagli" class="contactstextarea" name="dettagli" rows="10" cols="50" maxlength="250"></textarea>
+                </div>
+
+                <div class="buttonrow">
+                    <input class="signupsubmit" type="submit" value="Iscriviti">
+                    <input class="signupreset" type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
     </div>
+
     </section>
 </div>
 <script>
