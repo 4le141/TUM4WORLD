@@ -55,7 +55,7 @@
                 <div class="inputfield">
                     <select name="reason" id="reason" required>
                         <option value="donazione">Vorrei fare una donazione</option>
-                        <option value="adozione">Vorrei adottare un amico a 4 zampe</option>
+                        <option value="adozione">Vorrei adottare un amico a quattro zampe</option>
                         <option value="volontario">Vorrei rendermi disponibile come volontario</option>
                         <option value="altro">Altro</option>
                     </select>
@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="buttonrow">
-                    <input class="signupsubmit" type="submit" value="Iscriviti">
+                    <input class="signupsubmit" type="submit" value="Invia">
                     <input class="signupreset" type="reset" value="Reset">
                 </div>
             </form>

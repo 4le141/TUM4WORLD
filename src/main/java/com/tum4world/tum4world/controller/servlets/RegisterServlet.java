@@ -50,7 +50,7 @@ public class RegisterServlet extends HttpServlet {
             return;
         }
         userService.insertUser(u);
-        response.sendRedirect("invioconfermato");
+        response.sendRedirect("iscrizioneconfermata");
     }
 
 }

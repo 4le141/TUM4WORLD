@@ -2,7 +2,7 @@
     <p id="frase">Salvare la vita a un animale significa migliorare non solo la sua ma soprattutto la propria</p>
 </div>
 <script>
-    const intervallo = 1000*20;  // Intervallo di tempo in millisecondi (5 secondi)
+    const intervallo = 1000*20;  // Intervallo di tempo in millisecondi (20 secondi)
 
     function cambiaFrase() {
         const frase = document.getElementById("frase");
