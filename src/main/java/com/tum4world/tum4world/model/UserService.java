@@ -96,6 +96,9 @@ public class UserService {
     }
 
     public boolean userNameAlreadyExists(String username){
+        if(users.stream().map(User::getUsername).anyMatch(u -> u.equals(username))){
+            return true;
+        }
         try (Connection conn = DatabaseUtils.getConnection()) {
             PreparedStatement ps = conn.prepareStatement("SELECT username from USERS where username=?");
             ps.setString(1, username);

@@ -4,9 +4,12 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @WebServlet(name = "ContattiServlet", value = "/sendmailservlet")
 public class SendMailServlet extends HttpServlet {
+    Logger logger = Logger.getLogger(SendMailServlet.class.getName());
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -18,9 +21,9 @@ public class SendMailServlet extends HttpServlet {
         String lname = request.getParameter("lname");
         String email = request.getParameter("email");
         String reason = request.getParameter("reason");
-        if (reason.equals("Altro")) {
-            String reasonLabel = request.getParameter("dettagli");
-        }
+        String reasonLabel = request.getParameter("dettagli");
+
+        logger.log(Level.INFO, String.format("Invio mail a %s, oggetto: %s, messaggio: %s", email, reason, reasonLabel));
         response.sendRedirect(request.getContextPath() + "/invioconfermato");
     }
 }
