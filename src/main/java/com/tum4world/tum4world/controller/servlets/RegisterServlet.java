@@ -1,6 +1,8 @@
 package com.tum4world.tum4world.controller.servlets;
 
 import com.tum4world.tum4world.model.User;
+import com.tum4world.tum4world.model.UserActivities;
+import com.tum4world.tum4world.model.UserActivitiesService;
 import com.tum4world.tum4world.model.UserService;
 
 import javax.servlet.*;
@@ -11,10 +13,12 @@ import java.io.IOException;
 @WebServlet(name = "RegisterServlet", value = "/iscriviti")
 public class RegisterServlet extends HttpServlet {
     private UserService userService;
+    private UserActivitiesService userActivitiesService;
     @Override
     public void init() throws ServletException {
         super.init();
         userService = new UserService();
+        userActivitiesService = new UserActivitiesService();
     }
 
     @Override
@@ -50,6 +54,7 @@ public class RegisterServlet extends HttpServlet {
             return;
         }
         userService.insertUser(u);
+        userActivitiesService.insertUserActivities(new UserActivities(u.getUsername()));
         response.sendRedirect("iscrizioneconfermata");
     }
 

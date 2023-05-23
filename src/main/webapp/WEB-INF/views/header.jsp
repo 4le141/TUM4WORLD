@@ -11,6 +11,30 @@
     <meta charset="UTF-8">
     <title>Tum4World - ${param.title} </title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/style/main.css">
+    <%
+        if(isUserLogged) {
+            User.UserMode userMode = user.getUserMode();
+    %>
+        <%
+            if(userMode.equals(User.UserMode.SIMPATIZZANTE)) {
+        %>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/style/simpatizzante.css">
+        <%
+        } else if(userMode.equals(User.UserMode.ADERENTE)) {
+        %>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/style/aderente.css">
+        <%
+        } else if(userMode.equals(User.UserMode.AMMINISTRATORE)) {
+        %>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/style/admin.css">
+        <%
+            }
+        %>
+    <%
+        }
+    %>
+
+
     <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/images/logo.png">
     <script src="${pageContext.request.contextPath}/js/main.js"></script>
 </head>

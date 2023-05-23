@@ -28,15 +28,19 @@
             <h2> Iscriviti alle nostre attività </h2>
         </div>
         <div class="row">
-            <form action="">
-                <input type="checkbox" id="iscrizioneAttivita1" name="attivita1" value="attivita1">
+            <form action="" method="post">
+                <input type="checkbox" id="iscrizioneAttivita1"
+                       name="attivita1"${requestScope.activities.activity1 ? 'checked' : ''} >
                 Prenditi cura dei cani <br>
-                <input type="checkbox" id="iscrizioneAttivita2" name="attivita2" value="attivita2">
+                <input type="checkbox" id="iscrizioneAttivita2"
+                       name="attivita2" ${requestScope.activities.activity2 ? 'checked' : ''}>
                 Prenditi cura dei gatti <br>
-                <input type="checkbox" id="iscrizioneAttivita3" name="attivita3" value="attivita3">
+                <input type="checkbox" id="iscrizioneAttivita3"
+                       name="attivita3"${requestScope.activities.activity3 ? 'checked' : ''}>
                 Visita le scuole <br>
+                <p style="visibility: ${requestScope.success ? 'visible' : 'hidden' }">Iscrizione confermata!</p>
+
                 <input class="buttons" type="submit" value="Iscriviti">
-                <input class="buttons" type="reset" value="Reset">
             </form>
         </div>
     </section>

@@ -55,11 +55,6 @@
         <jsp-file>/WEB-INF/views/restricted/viewProfile.jsp</jsp-file>
     </servlet>
 
-    <servlet>
-        <servlet-name>IscrivitiAttivitaRestricted</servlet-name>
-        <jsp-file>/WEB-INF/views/restricted/iscrivitiAttivita.jsp</jsp-file>
-    </servlet>
-
 
     <servlet>
         <servlet-name>DonazioniAdmin</servlet-name>
@@ -134,10 +129,6 @@
         <url-pattern>/restricted/profilo</url-pattern>
     </servlet-mapping>
 
-    <servlet-mapping>
-        <servlet-name>IscrivitiAttivitaRestricted</servlet-name>
-        <url-pattern>/restricted/iscriviti</url-pattern>
-    </servlet-mapping>
 
 
     <servlet-mapping>
