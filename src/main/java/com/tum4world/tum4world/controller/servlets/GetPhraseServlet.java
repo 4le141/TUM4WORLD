@@ -20,8 +20,8 @@ public class GetPhraseServlet extends HttpServlet {
         super.init();
         phraseList = new ArrayList<>();
         phraseList.addAll(Arrays.asList(
-                "Amare e sentirsi amati: il rapporto con gli animali spesso può essere più forte di quello con le persone",
-                "Adottare un cucciolo è una possibilità che ci viene data per far del bene al nostro pianeta, inizia anche te a fare la differenza!",
+                "Amare e sentirsi amati: il rapporto con gli animali spesso può essere pi\u0185 forte di quello con le persone",
+                "Adottare un cucciolo \u0168 una possibilit\u0160 che ci viene data per far del bene al nostro pianeta, inizia anche te a fare la differenza!",
                 "Salvare la vita a un animale significa migliorare non solo la sua ma soprattutto la propria",
                 "L'amore di una persona verso il proprio animale può soltanto significare che si proteggono e si confortano l'un l'altro",
                 "Per vivere pienamente la gioia dobbiamo avere un piccolo amico a quattro zampe"
