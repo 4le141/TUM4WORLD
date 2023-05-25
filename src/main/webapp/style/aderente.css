@@ -12,6 +12,7 @@ button {
     background-color: lightgray;
 }
 
+/* modifiche a header e footer da loggato*/
 .header {
     background-color: #EB7E10;
 }
@@ -19,6 +20,7 @@ button {
     background-color: #EB7E10;
 }
 
+/*robe per la pagina delle attività*/
 .container {
     display: block;
     position: relative;
@@ -29,8 +31,7 @@ button {
     -ms-user-select: none;
     user-select: none;
 }
-
-/* Hide the browser's default checkbox il maledetto nasconde il submit button
+/* Hide the browser's default checkbox (sembra che il maledetto nasconda il submit button)
 .container input {
     position: absolute;
     opacity: 0;
@@ -38,7 +39,6 @@ button {
     height: 0;
     width: 0;
 }*/
-
 /* Create a custom checkbox */
 .checkmark {
     position: absolute;
@@ -48,24 +48,20 @@ button {
     width: 25px;
     background-color: gray;
 }
-
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
     background-color: cornflowerblue;
 }
-
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
-
 /* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
     display: block;
 }
-
 /* Style the checkmark/indicator */
 .container .checkmark:after {
     left: 9px;
@@ -89,7 +85,7 @@ button {
     border-radius: 50px;
 }
 
-
+/* robe per la pagina della donazione */
 .donation-container {
     width: 300px;
     margin: 0 auto;
@@ -99,7 +95,6 @@ button {
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-
 .donation-container h2 {
     margin-bottom: 20px;
     color: #666;
@@ -108,7 +103,6 @@ button {
     display: inline-block;
     position: relative;
 }
-
 .currency-symbol {
     position: absolute;
     left: 5px;
@@ -122,7 +116,6 @@ input[type="number"] {
     border: none;
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
-
 input[type="number"]:focus {
     outline: none;
 }
@@ -136,4 +129,31 @@ input[type="submit"] {
     color: #fff;
     font-size: 16px;
     cursor:pointer
+}
+
+
+/* robe per la pagina del profilo */
+.profile-container { /* il contenitore che contiene le info del profilo */
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.profile-container h2 { /* il titolo del contenitore */
+    margin-bottom: 20px;
+    color: #666;
+}
+.profile-info { /* il dato singolo */
+    margin-bottom: 10px;
+}
+.profile-info label { /* la scritta del dato singolo */
+    /*width: 350px;*/
+    font-weight: bold;
+    /*color: #666;*/
+    text-align: left;
+    margin-top: 5px;
+    /*line-height: 1.5px;*/
+    font-size: 22px;
 }

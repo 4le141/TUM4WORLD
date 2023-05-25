@@ -1,7 +1,7 @@
 <jsp:include page="/WEB-INF/views/header.jsp">
     <jsp:param name="title" value="Iscrizione attività"/>
 </jsp:include>
-<style>
+<style> /*questa cosa è brutta mi rendo conto ma serve a cancellare la checkbox di default solo in questa pagina così posso usare la mia versione più figa (se crea problemi ne parliamo e cerco di risolvere sorry)*/
     .container input {
     position: absolute;
     opacity: 0;
