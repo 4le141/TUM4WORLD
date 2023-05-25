@@ -1,3 +1,50 @@
-.header {
-    background-color: #4697FF;
+.header,.footer {
+    background-color: #4a71b0;
+}
+button {
+    background-color:#45AEB1 ;
+    color: white;
+    border: 2px solid darkslategray;
+    padding: 30px 30px;
+    border-radius: 0px;
+    margin: 20px;
+}
+
+.headerlinks{
+    background-color:#dbedef;
+}
+.headerlinks a{
+    color:#4a58b0;
+}
+.headerlinks a:hover {
+    background-color:#4a71b0;
+}
+#frase{
+    color:#4a71b0;
+}
+/*style pagina profilo*/
+.profile-container{
+    background-color:#4694AF;
+    width: max;
+    padding: 40px;
+}
+.profile-info label{
+    text-align: center;
+    color: #efffff;
+    font-size: 20px;
+    font-style:italic;
+    font-weight:bolder;
+}
+h1{
+    color:#073870;
+    text-align:center;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+/*style pagina attivita*/
+.content{
+    background-color:#c0dce8b8;
+}
+.container{
+    color:#073870;
 }
