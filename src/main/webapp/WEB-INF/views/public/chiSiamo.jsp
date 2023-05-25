@@ -21,15 +21,15 @@
         </p>
 
         <p>I membri dell'Associazione, fondata a maggio 2023 da i rappresentanti Mirco, Alessia, Anna e Federeica, sono
-            giovani appassionati di ogni età, uniti dal desiderio di
+            giovani appassionati di ogni et&#224, uniti dal desiderio di
             fare la differenza nella
             vita degli animali e di rendere il mondo un posto migliore per loro. Grazie alla loro energia e alla loro
-            passione, l'associazione ha già ottenuto importanti risultati nella tutela degli animali e continua a lavorare
+            passione, l'associazione ha gi&#224 ottenuto importanti risultati nella tutela degli animali e continua a lavorare
             con impegno e dedizione per il loro benessere.<br> <br>
 
             L'associazione organizza regolarmente eventi nella propria sede a Trento e iniziative per raccogliere fondi da
             destinare alla cura degli
-            animali, sia domestici che selvatici. Tra le attività svolte ci sono adozioni, campagne di sterilizzazione e di
+            animali, sia domestici che selvatici. Tra le attivit&#224 svolte ci sono adozioni, campagne di sterilizzazione e di
             microchippatura, sensibilizzazione sui temi della salvaguardia ambientale e dei diritti degli animali, raccolta
             di cibo e coperte da donare ai canili e gattili del territorio. <br> <br>
 

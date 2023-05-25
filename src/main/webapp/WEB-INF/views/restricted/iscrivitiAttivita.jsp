@@ -25,24 +25,45 @@
             </div>
         </div>
         <div class="row">
-            <h2> Iscriviti alle nostre attività </h2>
+            <h2> Iscriviti alle nostre attivit&#224 </h2>
         </div>
+        <form action="" method="post">
+        <label class="container">Prenditi cura dei cani
+            <input type="checkbox" id="iscrizioneAttivita1" name="attivita1"${requestScope.activities.activity1 ? 'checked' : ''} >
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Prenditi cura dei gatti
+            <input type="checkbox" id="iscrizioneAttivita2" name="attivita2" ${requestScope.activities.activity2 ? 'checked' : ''}>
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Visita le scuole
+            <input type="checkbox" id="iscrizioneAttivita3" name="attivita3"${requestScope.activities.activity3 ? 'checked' : ''}>
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">
+            <button type="submit">Conferma scelte</button>
+        </label>
+        <p style="visibility: ${requestScope.success ? 'visible' : 'hidden' }">Iscrizione confermata!</p>
+
+        <%-- TODO sistemare il bottone brutto--%>
+            <%--
+        </form>
         <div class="row">
             <form action="" method="post">
                 <input type="checkbox" id="iscrizioneAttivita1"
                        name="attivita1"${requestScope.activities.activity1 ? 'checked' : ''} >
-                Prenditi cura dei cani <br>
+                <p>Prenditi cura dei cani</p> <br>
                 <input type="checkbox" id="iscrizioneAttivita2"
                        name="attivita2" ${requestScope.activities.activity2 ? 'checked' : ''}>
-                Prenditi cura dei gatti <br>
+                <p>Prenditi cura dei gatti</p> <br>
                 <input type="checkbox" id="iscrizioneAttivita3"
                        name="attivita3"${requestScope.activities.activity3 ? 'checked' : ''}>
-                Visita le scuole <br>
+                <p>Visita le scuole</p> <br>
                 <p style="visibility: ${requestScope.success ? 'visible' : 'hidden' }">Iscrizione confermata!</p>
 
                 <input class="buttons" type="submit" value="Iscriviti">
             </form>
-        </div>
+        </div>--%>
     </section>
 </div>
 <jsp:include page="/WEB-INF/views/footer.jsp"/>

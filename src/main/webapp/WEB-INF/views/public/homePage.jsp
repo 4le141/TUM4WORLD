@@ -12,9 +12,9 @@
         <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png"
              alt="Description Image" style="max-width: 25%">
         <div class="row">
-            <p>L'Associazione TUM4WORLD è una organizzazione di beneficenza,
+            <p>L'Associazione TUM4WORLD &#232 una organizzazione di beneficenza,
                 formata da un gruppo di giovani appassionati di animali e impegnati nella loro protezione.
-                L'obiettivo principale dell'associazione è quello di sensibilizzare l'opinione pubblica sull'importanza
+                L'obiettivo principale dell'associazione &#232 quello di sensibilizzare l'opinione pubblica sull'importanza
                 della tutela degli animali e promuovere azioni concrete a sostegno
                 della loro salute e del loro benessere. <br></p>
         </div>
