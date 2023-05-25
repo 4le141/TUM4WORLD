@@ -1,7 +1,14 @@
 <jsp:include page="/WEB-INF/views/header.jsp">
     <jsp:param name="title" value="Iscrizione attività"/>
 </jsp:include>
-
+<style>
+    .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}</style>
 <div class="content">
     <section class="attivita">
         <div class="row">
