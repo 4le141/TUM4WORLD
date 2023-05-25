@@ -9,8 +9,8 @@
         <div class="row">
             <h1> HOMEPAGE </h1>
         </div>
-        <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png"
-             alt="Description Image" style="max-width: 25%">
+        <img src="${pageContext.request.contextPath}/images/volontariato.jpg"
+             alt="Description Image" style="max-width: 50%">
         <div class="row">
             <p>L'Associazione TUM4WORLD &#232 una organizzazione di beneficenza,
                 formata da un gruppo di giovani appassionati di animali e impegnati nella loro protezione.

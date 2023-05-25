@@ -12,11 +12,11 @@
         </div>
         <div class="chisiamo-container">
         <p class="containerImages">
-            <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png" alt="Left Image" class="left" style="transform: rotate(10deg);">
+            <img src="${pageContext.request.contextPath}/images/Gatto.jpg" alt="Left Image" class="left" style="transform: rotate(10deg);">
             <br>
-            <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png" alt="Left Image" class="left" style="transform: rotate(-10deg);">
+            <img src="${pageContext.request.contextPath}/images/caneAlessia.jpg" alt="Left Image" class="left" style="transform: rotate(-10deg);">
             <br>
-            <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png" alt="Left Image" class="left" style="transform: rotate(10deg);">
+            <img src="${pageContext.request.contextPath}/images/fotocane.jpg" alt="Left Image" class="left" style="transform: rotate(10deg);">
             <br>
         </p>
 
@@ -37,11 +37,11 @@
             l'associazione TUM4WORLD per gli Animali e a unirti a loro nella lotta per la difesa dei nostri amici a quattro
             zampe. <br> <br></p>
         <p class="containerImages">
-            <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png" alt="Right Image" class="right" style="transform: rotate(-10deg);">
+            <img src="${pageContext.request.contextPath}/images/gattoAnna.jpg" alt="Right Image" class="right" style="transform: rotate(-10deg);">
             <br>
-            <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png" alt="Right Image" class="right" style="transform: rotate(10deg);">
+            <img src="${pageContext.request.contextPath}/images/caneSullaNeve.jpg" alt="Right Image" class="right" style="transform: rotate(10deg);">
             <br>
-            <img src="${pageContext.request.contextPath}/images/macchina_foto_disegno.png" alt="Right Image" class="right" style="transform: rotate(-10deg);">
+            <img src="${pageContext.request.contextPath}/images/gattoCiccione.jpg" alt="Right Image" class="right" style="transform: rotate(-10deg);">
             <br>
         </p>
         </div>
