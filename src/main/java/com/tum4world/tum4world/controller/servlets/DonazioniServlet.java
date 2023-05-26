@@ -29,7 +29,7 @@ public class DonazioniServlet extends HttpServlet {
         User utente = (User) session.getAttribute("user");
         BigDecimal amount = BigDecimal.valueOf((Double.valueOf(request.getParameter("amount"))));
         UserService.insertDonazione(utente,amount);
-        response.sendRedirect("donazioneconfermata");
+        response.sendRedirect(response.encodeRedirectURL("donazioneconfermata"));
 
 
     }

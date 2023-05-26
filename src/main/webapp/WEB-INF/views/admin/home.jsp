@@ -1,3 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" session="true" %>
+
 <jsp:include page="/WEB-INF/views/header.jsp">
     <jsp:param name="title" value="home"/>
 </jsp:include>
@@ -11,19 +13,19 @@
                 Scopri le funzioni dedicate all'amministratore
             </div>
             <div class="dashboardbuttons">
-                <a class="dashboardoption" href="${pageContext.request.contextPath}/admin/utenti">
+                <a class="dashboardoption" href="<% out.print(response.encodeURL(request.getContextPath()+"/admin/utenti")); %>">
                     <img src="${pageContext.request.contextPath}/images/userlisticon.png" alt="User List Icon">
                     <div>
                         Mostra gli utenti registrati
                     </div>
                 </a>
-                <a class="dashboardoption" href="${pageContext.request.contextPath}/admin/statistiche">
+                <a class="dashboardoption" href="<% out.print(response.encodeURL(request.getContextPath()+"/admin/statistiche")); %>">
                     <img src="${pageContext.request.contextPath}/images/statisticsicon.png" alt="Statistics Icon">
                     <div>
                         Visualizza le Statistiche
                     </div>
                 </a>
-                <a class="dashboardoption" href="${pageContext.request.contextPath}/admin/donazioni">
+                <a class="dashboardoption" href="<% out.print(response.encodeURL(request.getContextPath()+"/admin/donazioni")); %>">
                     <img src="${pageContext.request.contextPath}/images/donationlisticon.png" alt="Donation List Icon">
                     <div>
                         Visualizza le Donazioni

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" session="false" %>
 
 <jsp:include page="/WEB-INF/views/header.jsp" >
     <jsp:param name="title" value="Login" />
@@ -12,7 +12,7 @@
         <div class="errormessage" style="display: ${error ? 'flex' : 'none'};">
             Username o Password errati!
         </div>
-        <form class="signup-form" method="post" action="./login">
+        <form class="signup-form" method="post" action="<% out.print(response.encodeURL("./login")); %>">
 
             <label for="username" class="form-label">Nome Utente</label>
             <div class="inputfield">

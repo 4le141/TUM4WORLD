@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" session="true" %>
 <%@ page import="com.tum4world.tum4world.model.User" %>
 <jsp:include page="/WEB-INF/views/header.jsp">
     <jsp:param name="title" value="home"/>
@@ -14,13 +15,13 @@
                 <%
                     if (((User) request.getSession().getAttribute("user")).getUserMode().equals(User.UserMode.SIMPATIZZANTE)) {
                 %>
-                <a class="dashboardoption" href="${pageContext.request.contextPath}/restricted/profilo">
+                <a class="dashboardoption" href="<% out.print(response.encodeURL(request.getContextPath()+"/restricted/profilo")); %>">
                     <img src="${pageContext.request.contextPath}/images/profileicon.png" alt="Profile Icon">
                     <div>
                         Mostra il mio Profilo
                     </div>
                 </a>
-                <a class="dashboardoption" href="${pageContext.request.contextPath}/restricted/iscriviti">
+                <a class="dashboardoption" href="<% out.print(response.encodeURL(request.getContextPath()+"/restricted/iscriviti")); %>">
                     <img src="${pageContext.request.contextPath}/images/subscribeicon.png" alt="Subscribe Icon">
                     <div>
                         Iscriviti ad un'attivit&#224
@@ -29,48 +30,26 @@
                 <%
                 } else if (((User) request.getSession().getAttribute("user")).getUserMode().equals(User.UserMode.ADERENTE)) {
                 %>
-                <a  class="dashboardoption" href="${pageContext.request.contextPath}/restricted/profilo">
+                <a  class="dashboardoption" href="<% out.print(response.encodeURL(request.getContextPath()+"/restricted/profilo")); %>">
                     <img src="${pageContext.request.contextPath}/images/profileicon.png" alt="Profile Icon">
                     <div>
                         Mostra il mio Profilo
                     </div>
                 </a>
-                <a class="dashboardoption" href="${pageContext.request.contextPath}/restricted/iscriviti">
+                <a class="dashboardoption" href="<% out.print(response.encodeURL(request.getContextPath()+"/restricted/iscriviti")); %>">
                     <img src="${pageContext.request.contextPath}/images/subscribeicon.png" alt="Subscribe Icon">
                     <div>
                         Iscriviti ad un'attivit&#224
                     </div>
                 </a>
-                <a  class="dashboardoption" href="${pageContext.request.contextPath}/restricted/dona">
+                <a  class="dashboardoption" href="<% out.print(response.encodeURL(request.getContextPath()+"/restricted/dona")); %>">
                     <img src="${pageContext.request.contextPath}/images/donationicon.png" alt="Donation Icon">
                     <div>
                         Effettua una Donazione
                     </div>
                 </a>
                 <%
-                } else if (((User) request.getSession().getAttribute("user")).getUserMode().equals(User.UserMode.AMMINISTRATORE)) {
-                %>
-
-                <a class="dashboardoption" href="${pageContext.request.contextPath}/admin/utenti">
-                    <img src="${pageContext.request.contextPath}/images/userlisticon.png" alt="User List Icon">
-                    <div>
-                        Mostra gli utenti registrati
-                    </div>
-                </a>
-                <a class="dashboardoption" href="${pageContext.request.contextPath}/admin/statistiche">
-                    <img src="${pageContext.request.contextPath}/images/statisticsicon.png" alt="Statistics Icon">
-                    <div>
-                        Visualizza le Statistiche
-                    </div>
-                </a>
-                <a class="dashboardoption" href="${pageContext.request.contextPath}/admin/donazioni">
-                    <img src="${pageContext.request.contextPath}/images/donationlisticon.png" alt="Donation List Icon">
-                    <div>
-                        Visualizza le Donazioni
-                    </div>
-                </a>
-                <%
-                    }
+                }
                 %>
             </div>
         </div>

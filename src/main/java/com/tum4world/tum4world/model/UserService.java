@@ -18,7 +18,7 @@ public class UserService {
         users = new ArrayList<>();
         User admin = new User();
         admin.setUsername("admin");
-        admin.setPassword("24Adm1n");
+        admin.setPassword("24Adm1n!");
         admin.setUserMode(User.UserMode.AMMINISTRATORE);
         admin.setFirstname("Admin");
 

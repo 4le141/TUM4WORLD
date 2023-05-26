@@ -39,11 +39,11 @@ public class AuthorizationFilter implements Filter {
         else if(servletPath.equals("/login") && user != null){
             switch (user.getUserMode()){
                 case AMMINISTRATORE:
-                    resp.sendRedirect("admin/home");
+                    resp.sendRedirect(resp.encodeRedirectURL("admin/home"));
                     return;
                 case ADERENTE:
                 case SIMPATIZZANTE:
-                    resp.sendRedirect("restricted/home");
+                    resp.sendRedirect(resp.encodeRedirectURL("restricted/home"));
                     return;
             }
         }

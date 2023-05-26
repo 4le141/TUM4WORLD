@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" session="true" %>
 <jsp:include page="/WEB-INF/views/header.jsp">
     <jsp:param name="title" value="Iscrizione attività"/>
 </jsp:include>
@@ -34,7 +35,7 @@
         <div class="row">
             <h2> Iscriviti alle nostre attivit&#224 </h2>
         </div>
-        <form action="" method="post">
+        <form action="<% out.print(response.encodeURL("")); %>" method="post">
         <label class="container">Prenditi cura dei cani
             <input type="checkbox" id="iscrizioneAttivita1" name="attivita1"${requestScope.activities.activity1 ? 'checked' : ''} >
             <span class="checkmark"></span>

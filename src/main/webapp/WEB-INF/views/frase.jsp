@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" session="false" %>
 <div class="quotesection">
     <p id="frase">Salvare la vita a un animale significa migliorare non solo la sua ma soprattutto la propria</p>
 </div>

@@ -1,8 +1,9 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" session="true" %>
 <jsp:include page="/WEB-INF/views/header.jsp">
     <jsp:param name="title" value="Dona"/>
 </jsp:include>
 <div class="donation-container">
-    <form action="./dona" method="post">
+    <form action="<% out.print(response.encodeURL("./dona")); %>" method="post">
     <h2>Fai una donazione</h2>
     <div class="input-container">
         <span class="currency-symbol">&#8364</span> <%-- fidati ma è il simbolo dell'euro --%>

@@ -39,11 +39,11 @@ public class LoginServlet extends HttpServlet {
         s.setAttribute("user", u);
         switch (u.getUserMode()){
             case AMMINISTRATORE:
-                response.sendRedirect("admin/home");
+                response.sendRedirect(response.encodeRedirectURL("admin/home"));
                 break;
             case ADERENTE:
             case SIMPATIZZANTE:
-                response.sendRedirect("restricted/home");
+                response.sendRedirect(response.encodeRedirectURL("restricted/home"));
                 break;
         }
     }
