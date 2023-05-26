@@ -25,7 +25,6 @@ button {
 /*style pagina profilo*/
 .profile-container{
     background-color:#4694AF;
-    width: max;
     padding: 40px;
 }
 .profile-info label{
@@ -83,9 +82,27 @@ h1{
     font-size: 14px;
     border: none;
     cursor: pointer;
-    background-color: #56cc75;
+    background-color: #4a71b0;
     color: white;
     padding: 10px 20px;
     border-radius: 50px;
 }
 
+.dashboardtitle {
+    color: #4a71b0;
+    text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+}
+
+.dashboardtext{
+    color: #4a71b0;
+}
+
+a.dashboardoption {
+    color: #4a71b0;
+    border: 2px solid #d9d9d9;
+}
+
+a.dashboardoption:hover{
+    background-color: #c7d8f6;
+    border: 2px solid #4a71b0;
+}

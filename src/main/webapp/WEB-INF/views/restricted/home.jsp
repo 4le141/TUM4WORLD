@@ -5,49 +5,74 @@
 
 <div class="content ">
     <div class="backgroundImage signup-content">
-        <div class="row"><h1>Benvenuto nel nostro sito!</h1> <br></div>
-        <div class="row">
-            <p style="color: #f9f9f9"> Scopri le nuove funzioni a tua disposizione<br></p>
-        </div>
-        <div class="row">
-            <%
-                if (((User) request.getSession().getAttribute("user")).getUserMode().equals(User.UserMode.SIMPATIZZANTE)) {
-            %>
-            <a href="${pageContext.request.contextPath}/restricted/profilo">
-                <button class="button">Mostra il mio profilo</button>
-            </a>
-            <a href="${pageContext.request.contextPath}/restricted/iscriviti">
-                <button class="button">Iscriviti ad un'attivit&#224</button>
-            </a>
-            <%
-            } else if (((User) request.getSession().getAttribute("user")).getUserMode().equals(User.UserMode.ADERENTE)) {
-            %>
-            <a href="${pageContext.request.contextPath}/restricted/profilo">
-                <button class="button">Mostra il mio profilo</button>
-            </a>
-            <a href="${pageContext.request.contextPath}/restricted/iscriviti">
-                <button class="button">Iscriviti ad un'attivit&#224</button>
-            </a>
-            <a href="${pageContext.request.contextPath}/restricted/dona">
-                <button class="button">Effettua una donazione</button>
-            </a>
-            <br>
-            <%
-            } else if (((User) request.getSession().getAttribute("user")).getUserMode().equals(User.UserMode.AMMINISTRATORE)) {
-            %>
-            <a href="${pageContext.request.contextPath}/admin/utenti">
-                <button class="button">Mostra gli utenti registrati</button>
-            </a>
-            <a href="${pageContext.request.contextPath}/admin/statistiche">
-                <button class="button">Visualizza le statistiche</button>
-            </a>
-            <a href="${pageContext.request.contextPath}/admin/donazioni">
-                <button class="button">Visualizza le donazioni</button>
-            </a>
-            <br>
-            <%
-                }
-            %>
+        <div class="dashboardtitle">Benvenuto nel nostro sito!</div>
+        <div class="dashboardwrapper">
+            <div class="dashboardtext">
+                Scopri le nuove funzioni a tua disposizione:
+            </div>
+            <div class="dashboardbuttons">
+                <%
+                    if (((User) request.getSession().getAttribute("user")).getUserMode().equals(User.UserMode.SIMPATIZZANTE)) {
+                %>
+                <a class="dashboardoption" href="${pageContext.request.contextPath}/restricted/profilo">
+                    <img src="${pageContext.request.contextPath}/images/profileicon.png" alt="Profile Icon">
+                    <div>
+                        Mostra il mio Profilo
+                    </div>
+                </a>
+                <a class="dashboardoption" href="${pageContext.request.contextPath}/restricted/iscriviti">
+                    <img src="${pageContext.request.contextPath}/images/subscribeicon.png" alt="Subscribe Icon">
+                    <div>
+                        Iscriviti ad un'attivit&#224
+                    </div>
+                </a>
+                <%
+                } else if (((User) request.getSession().getAttribute("user")).getUserMode().equals(User.UserMode.ADERENTE)) {
+                %>
+                <a  class="dashboardoption" href="${pageContext.request.contextPath}/restricted/profilo">
+                    <img src="${pageContext.request.contextPath}/images/profileicon.png" alt="Profile Icon">
+                    <div>
+                        Mostra il mio Profilo
+                    </div>
+                </a>
+                <a class="dashboardoption" href="${pageContext.request.contextPath}/restricted/iscriviti">
+                    <img src="${pageContext.request.contextPath}/images/subscribeicon.png" alt="Subscribe Icon">
+                    <div>
+                        Iscriviti ad un'attivit&#224
+                    </div>
+                </a>
+                <a  class="dashboardoption" href="${pageContext.request.contextPath}/restricted/dona">
+                    <img src="${pageContext.request.contextPath}/images/donationicon.png" alt="Donation Icon">
+                    <div>
+                        Effettua una Donazione
+                    </div>
+                </a>
+                <%
+                } else if (((User) request.getSession().getAttribute("user")).getUserMode().equals(User.UserMode.AMMINISTRATORE)) {
+                %>
+
+                <a class="dashboardoption" href="${pageContext.request.contextPath}/admin/utenti">
+                    <img src="${pageContext.request.contextPath}/images/userlisticon.png" alt="User List Icon">
+                    <div>
+                        Mostra gli utenti registrati
+                    </div>
+                </a>
+                <a class="dashboardoption" href="${pageContext.request.contextPath}/admin/statistiche">
+                    <img src="${pageContext.request.contextPath}/images/statisticsicon.png" alt="Statistics Icon">
+                    <div>
+                        Visualizza le Statistiche
+                    </div>
+                </a>
+                <a class="dashboardoption" href="${pageContext.request.contextPath}/admin/donazioni">
+                    <img src="${pageContext.request.contextPath}/images/donationlisticon.png" alt="Donation List Icon">
+                    <div>
+                        Visualizza le Donazioni
+                    </div>
+                </a>
+                <%
+                    }
+                %>
+            </div>
         </div>
     </div>
 </div>

@@ -15,3 +15,45 @@ button {
 .header {
     background-color: #FF4453;
 }
+
+.dashboardtitle {
+    color: #FF4453;
+    text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+}
+
+.dashboardtext{
+    color: #FF4453;
+}
+
+a.dashboardoption {
+    color: #FF4453;
+    border: 2px solid #d9d9d9;
+}
+
+a.dashboardoption:hover{
+    background-color: #ffbec2;
+    border: 2px solid #FF4453;
+}
+
+.usermenu.active{
+    color: #FF4453;
+    background-color:white;
+    box-shadow: -5px 5px 10px rgba(38, 23, 23, 0.59);
+}
+
+.usermenucontent a:hover{
+    background-color: #ff8c95;
+    color:white;
+}
+
+.usermenuseparator{
+    background-color: #ff8c95;
+}
+
+.headerlinks a {
+    color: #FF4453;
+}
+
+.headerlinks a:hover {
+    background-color: #FF4453;
+}
