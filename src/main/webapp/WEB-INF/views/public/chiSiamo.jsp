@@ -4,7 +4,6 @@
 <jsp:include page="/WEB-INF/views/header.jsp" >
     <jsp:param name="title" value="Chi siamo" />
 </jsp:include>
-
 <div class="content">
     <section class="chisiamo">
         <div class="chisiamo-container">
@@ -39,7 +38,7 @@
         <p class="containerImages">
             <img src="${pageContext.request.contextPath}/images/gattoAnna.jpg" alt="Right Image" class="right" style="transform: rotate(-10deg);">
             <br>
-            <img src="${pageContext.request.contextPath}/images/caneSullaNeve.jpg" alt="Right Image" class="right" style="transform: rotate(10deg);">
+            <img src="${pageContext.request.contextPath}/images/teo.jpeg" alt="Right Image" class="right" style="transform: rotate(10deg);">
             <br>
             <img src="${pageContext.request.contextPath}/images/gattoCiccione.jpg" alt="Right Image" class="right" style="transform: rotate(-10deg);">
             <br>

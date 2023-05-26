@@ -1,7 +1,9 @@
 html, body {
     margin: 0;
     height: 100%;
-    background-color: lightgray;
+    background-image: url('../images/leavesback.jpg');
+    background-attachment: fixed;
+    background-size: cover;
     font-family: "Trebuchet MS", serif;
 }
 

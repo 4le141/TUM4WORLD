@@ -16,17 +16,17 @@
         </div>
         <div class="row">
             <div class="column" style="background-color:lightgray;">
-                <div><img class="animazione" src="${pageContext.request.contextPath}/images/logo.png"
+                <div><img class="animazione" src="${pageContext.request.contextPath}/images/adottaCane.jpg"
                           alt="Prenditi cura dei cani" width="100%"></div>
                 <h2>Prenditi cura dei cani</h2>
             </div>
             <div class="column" style="background-color:lightgray;">
-                <div><img class="animazione" src="${pageContext.request.contextPath}/images/logo.png"
+                <div><img class="animazione" src="${pageContext.request.contextPath}/images/gattoAlessia.jpg"
                           alt="Prenditi cura dei gatti" width="100%"></div>
                 <h2>Prenditi cura dei gatti</h2>
             </div>
             <div class="column" style="background-color:lightgray;">
-                <div><img class="animazione" src="${pageContext.request.contextPath}/images/logo.png"
+                <div><img class="animazione" src="${pageContext.request.contextPath}/images/scuola2.jpg"
                           alt="Visita le scuole" width="100%"></div>
                 <h2>Visita le scuole</h2>
             </div>
