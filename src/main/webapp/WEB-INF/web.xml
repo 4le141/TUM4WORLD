@@ -68,13 +68,6 @@
         <servlet-name>StatisticheVisite</servlet-name>
         <jsp-file>/WEB-INF/views/admin/statisticheVisite.jsp</jsp-file>
     </servlet>
-    <servlet>
-        <servlet-name>UtentiAdmin</servlet-name>
-        <jsp-file>/WEB-INF/views/admin/utenti.jsp</jsp-file>
-    </servlet>
-
-
-
 
     <servlet-mapping>
         <servlet-name>HomePage</servlet-name>
@@ -143,13 +136,6 @@
         <servlet-name>StatisticheVisite</servlet-name>
         <url-pattern>/admin/statistiche</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>UtentiAdmin</servlet-name>
-        <url-pattern>/admin/utenti</url-pattern>
-    </servlet-mapping>
-
-
-
 
     <welcome-file-list>
         <welcome-file>home</welcome-file>

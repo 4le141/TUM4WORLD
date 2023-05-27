@@ -51,15 +51,22 @@
 <script>
     window.addEventListener('load', function () {
         let popup = document.getElementById('popup')
-        if(getCookie("cookieAccepted") !== "true"){
+        if(!getCookie("cookieAccepted")){
             popup.style.display = 'block'; // Mostra il popup quando la pagina è completamente caricata
         }
     });
     let btnAccept = document.getElementById('btnAccept')
+    let btnDecline = document.getElementById('btnDecline')
     btnAccept.addEventListener('click', function () {
         let popup = document.getElementById('popup')
         popup.style.display = 'none'; // Nascondi il popup quando viene cliccato "Accetta"
         document.cookie = "cookieAccepted=true; path=/";
+    });
+
+    btnDecline.addEventListener('click', function () {
+        let popup = document.getElementById('popup')
+        popup.style.display = 'none'; // Nascondi il popup quando viene cliccato "Accetta"
+        document.cookie = "cookieAccepted=false; path=/";
     });
 
 </script>

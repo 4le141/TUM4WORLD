@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class UserService {
 
@@ -49,15 +50,7 @@ public class UserService {
             ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
-                User u = new User();
-                u.setUsername(rs.getString(1));
-                u.setFirstname(rs.getString(3));
-                u.setLastname(rs.getString(4));
-                u.setBirthday(rs.getDate(5).toLocalDate().toString());
-                u.setEmail(rs.getString(6));
-                u.setPhone(rs.getString(7));
-                u.setUserMode(User.UserMode.valueOf(rs.getString(8)));
-                return u;
+                return resultSetToUser(rs);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -108,5 +101,43 @@ public class UserService {
             ex.printStackTrace();
             return false;
         }
+    }
+
+    public List<User> listUsers(User.UserMode userMode) {
+        List<User> users = new ArrayList<>();
+        try (Connection conn = DatabaseUtils.getConnection();
+        Statement s = conn.createStatement()) {
+            String query = "SELECT * FROM USERS";
+            if(userMode == User.UserMode.ADERENTE){
+                query += " WHERE usermode='ADERENTE'";
+                users.addAll(this.users.stream().filter(user -> user.getUserMode().equals(User.UserMode.ADERENTE)).collect(Collectors.toList()));
+            }
+            else if(userMode == User.UserMode.SIMPATIZZANTE){
+                query += " WHERE usermode='SIMPATIZZANTE'";
+                users.addAll(this.users.stream().filter(user -> user.getUserMode().equals(User.UserMode.SIMPATIZZANTE)).collect(Collectors.toList()));
+            }
+            else if(userMode == null){
+                users.addAll(this.users);
+            }
+            ResultSet rs = s.executeQuery(query);
+            while(rs.next()){
+                users.add(resultSetToUser(rs));
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return users;
+    }
+
+    private User resultSetToUser(ResultSet rs) throws SQLException {
+        User u = new User();
+        u.setUsername(rs.getString(1));
+        u.setFirstname(rs.getString(3));
+        u.setLastname(rs.getString(4));
+        u.setBirthday(rs.getDate(5).toLocalDate().toString());
+        u.setEmail(rs.getString(6));
+        u.setPhone(rs.getString(7));
+        u.setUserMode(User.UserMode.valueOf(rs.getString(8)));
+        return u;
     }
 }
