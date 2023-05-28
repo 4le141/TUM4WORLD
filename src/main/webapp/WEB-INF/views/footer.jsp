@@ -9,7 +9,7 @@
             <div class="footertitle">Tum4World Italia ONLUS</div>
             <div class="footerlink" style="text-align: left">
                 <img class="footerlinkicon" src="${pageContext.request.contextPath}/images/addresslogo.png" alt="Address Logo">
-                Piazza Barone, 110<br>24000 Roma
+                Piazza Barone, 110<br>24000 Roma,Italia
             </div>
 
             <div class="footerlink"> <img class="footerlinkicon" src="${pageContext.request.contextPath}/images/emaillogo.png" alt="E-Mail Logo"> tum4world@nessunonoluogonoesiste.com</div>

@@ -5,7 +5,15 @@
 </jsp:include>
 
 <div class="content">
-    TODO STATISTICHE->GRAFICO
+    <p id="visite"></p>
 </div>
-
+<script>
+    function getViews() {
+        const views = document.getElementById("visite");
+        xhttp.open("GET","${pageContext.request.contextPath}/statisticheVisite",true);
+        views.textContent=this.responseText;
+        xhttp.send();
+    }
+    //getViews();
+</script>
 <jsp:include page="/WEB-INF/views/footer.jsp" />

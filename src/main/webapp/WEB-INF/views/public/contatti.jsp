@@ -38,22 +38,22 @@
             <div class="contactstitle">
                 Scrivici!
             </div>
-            <form class="signup-form" action="./sendmailservlet" method="post">
+            <form class="signup-form" onsubmit="return requiredFunction()" action="./sendmailservlet" method="post" id="contatti">
 
                 <label for="firstname" class="form-label">Nome</label>
                 <div class="fullnamefield">
-                    <input type="text" name="firstname" id="firstname" placeholder="Nome" required>
-                    <input type="text" name="lastname" id="lastname" placeholder="Cognome" required>
+                    <input type="text" name="firstname" id="firstname" placeholder="Nome" >
+                    <input type="text" name="lastname" id="lastname" placeholder="Cognome" >
                 </div>
 
                 <label for="email" class="form-label">Email</label>
                 <div class="inputfield">
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email">
                 </div>
 
                 <label for="reason" class="form-label">Motivo di contatto </label>
                 <div class="inputfield">
-                    <select name="reason" id="reason" required>
+                    <select name="reason" id="reason" >
                         <option value="donazione">Vorrei fare una donazione</option>
                         <option value="adozione">Vorrei adottare un amico a quattro zampe</option>
                         <option value="volontario">Vorrei rendermi disponibile come volontario</option>
@@ -77,7 +77,7 @@
     </section>
 </div>
 <script>
-    function ValidateEmail(inputText) {
+    function ValidateEmail() {
         let email = document.forms["contacts"]["email"].value;
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (mailformat.test(email)) {
@@ -86,6 +86,32 @@
             alert("Formato email non valido")
             return false;
         }
+    }
+</script>
+<script>
+    function requiredFunction(){
+        let nome=document.getElementById("firstname");
+        let cognome=document.getElementById("lastname");
+        let email=document.getElementById("email");
+        let motivo=document.getElementById("reason");
+        let valido=true;
+        if (nome.value===""){
+            alert("Il campo nome non può essere vuoto");
+            valido=false;
+        }
+        if (cognome.value===""){
+            alert("Il campo cognome non può essere vuoto");
+            valido=false;
+        }
+        if (email.value===""){
+            alert("Il campo email  non può essere vuoto");
+            valido=false;
+        }
+        if (motivo.value===""){
+            alert("Il campo motivazione di contatto non può essere vuoto");
+            valido=false;
+        }
+        return valido;
     }
 </script>
 
