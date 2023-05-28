@@ -8,12 +8,6 @@
     <p id="visite"></p>
 </div>
 <script>
-    function getViews() {
-        const views = document.getElementById("visite");
-        xhttp.open("GET","${pageContext.request.contextPath}/statisticheVisite",true);
-        views.textContent=this.responseText;
-        xhttp.send();
-    }
-    //getViews();
+    TODO
 </script>
 <jsp:include page="/WEB-INF/views/footer.jsp" />
