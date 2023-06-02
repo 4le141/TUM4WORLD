@@ -105,20 +105,20 @@ public class UserService {
 
     public List<User> listUsers(User.UserMode userMode) {
         List<User> users = new ArrayList<>();
+        String query = "SELECT * FROM USERS";
+        if(userMode == User.UserMode.ADERENTE){
+            query += " WHERE usermode='ADERENTE'";
+            users.addAll(this.users.stream().filter(user -> user.getUserMode().equals(User.UserMode.ADERENTE)).collect(Collectors.toList()));
+        }
+        else if(userMode == User.UserMode.SIMPATIZZANTE){
+            query += " WHERE usermode='SIMPATIZZANTE'";
+            users.addAll(this.users.stream().filter(user -> user.getUserMode().equals(User.UserMode.SIMPATIZZANTE)).collect(Collectors.toList()));
+        }
+        else if(userMode == null){
+            users.addAll(this.users);
+        }
         try (Connection conn = DatabaseUtils.getConnection();
         Statement s = conn.createStatement()) {
-            String query = "SELECT * FROM USERS";
-            if(userMode == User.UserMode.ADERENTE){
-                query += " WHERE usermode='ADERENTE'";
-                users.addAll(this.users.stream().filter(user -> user.getUserMode().equals(User.UserMode.ADERENTE)).collect(Collectors.toList()));
-            }
-            else if(userMode == User.UserMode.SIMPATIZZANTE){
-                query += " WHERE usermode='SIMPATIZZANTE'";
-                users.addAll(this.users.stream().filter(user -> user.getUserMode().equals(User.UserMode.SIMPATIZZANTE)).collect(Collectors.toList()));
-            }
-            else if(userMode == null){
-                users.addAll(this.users);
-            }
             ResultSet rs = s.executeQuery(query);
             while(rs.next()){
                 users.add(resultSetToUser(rs));

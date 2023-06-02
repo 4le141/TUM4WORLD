@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 
 @WebServlet(name = "DonazioniServlet", value = "/restricted/dona")
-public class DonazioniServlet extends HttpServlet {
+public class DonaServlet extends HttpServlet {
     private UserService userService;
 
     public void init() throws ServletException {
