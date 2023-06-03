@@ -22,18 +22,21 @@ public class UserService {
         admin.setPassword("24Adm1n!");
         admin.setUserMode(User.UserMode.AMMINISTRATORE);
         admin.setFirstname("Admin");
+        admin.setLastname("");
 
         User aderente = new User();
         aderente.setUsername("aderente");
         aderente.setPassword("aderente");
         aderente.setUserMode(User.UserMode.ADERENTE);
         aderente.setFirstname("Aderente");
+        aderente.setLastname("");
 
         User simpatizzante = new User();
         simpatizzante.setUsername("simpatizzante");
         simpatizzante.setPassword("simpatizzante");
         simpatizzante.setUserMode(User.UserMode.SIMPATIZZANTE);
         simpatizzante.setFirstname("Simpatizzante");
+        simpatizzante.setLastname("");
 
         users.addAll(Arrays.asList(admin, simpatizzante, aderente));
     }

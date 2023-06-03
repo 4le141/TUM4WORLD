@@ -26,7 +26,15 @@
         <div class="userlistentry">
 
             <div class="userlistname">
-                <% out.print("• " +u.getFirstname() + " " + u.getLastname()); %>
+                <% out.print("• " +u.getUsername()); %>
+            </div>
+            <div class="miniseparator"></div>
+            <div class="userlistmode">
+                <% out.print(u.getFirstname() + " " + u.getLastname()); %>
+            </div>
+            <div class="miniseparator"></div>
+            <div class="userlistmode">
+                <% out.print(u.getEmail()); %>
             </div>
             <div class="miniseparator"></div>
             <div class="userlistmode">
@@ -39,6 +47,32 @@
         }
     %>
         </div>
+
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Birthdate</th>
+            <th>Phone</th>
+            <th>User mode</th>
+        </tr>
+        <%
+            List<User> users2 = (List<User>) request.getAttribute("users");
+            for(User u : users2){
+        %>
+        <tr>
+            <th><% out.print(u.getUsername()); %></th>
+            <th><% out.print(u.getFirstname() + " " + u.getLastname()); %></th>
+            <th><% out.print(u.getEmail()); %></th>
+            <th><% out.print(u.getBirthday()); %></th>
+            <th><% out.print(u.getPhone()); %></th>
+            <th><% out.print(u.getUserMode().toString()); %></th>
+        </tr>
+        <%
+            }
+        %>
+    </table>
 
 </div>
 
