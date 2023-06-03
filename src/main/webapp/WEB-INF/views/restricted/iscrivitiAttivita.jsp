@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" session="true" %>
 <jsp:include page="/WEB-INF/views/header.jsp">
-    <jsp:param name="title" value="Iscrizione attività"/>
+    <jsp:param name="title" value="Iscrizione"/>
 </jsp:include>
 <style> /*questa cosa è brutta mi rendo conto ma serve a cancellare la checkbox di default solo in questa pagina così posso usare la mia versione più figa (se crea problemi ne parliamo e cerco di risolvere sorry)*/
     .container input {

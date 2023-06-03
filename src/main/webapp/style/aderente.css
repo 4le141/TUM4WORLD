@@ -89,6 +89,8 @@ button {
 .donation-container {
     width: 300px;
     margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
     text-align: center;
     padding: 20px;
     border-radius: 20px;
@@ -136,6 +138,8 @@ input[type="submit"] {
 .profile-container { /* il contenitore che contiene le info del profilo */
     width: 400px;
     margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
     padding: 20px;
     border-radius: 20px;
     background-color: #fff;

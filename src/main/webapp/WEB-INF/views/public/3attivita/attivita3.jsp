@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" session="false" %>
 
 <jsp:include page="/WEB-INF/views/header.jsp" >
-    <jsp:param name="title" value="Attività 3" />
+    <jsp:param name="title" value="Visita le scuole" />
 </jsp:include>
 
 <div class="content">
