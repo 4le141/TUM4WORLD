@@ -53,8 +53,10 @@ public class AuthorizationFilter implements Filter {
 
         chain.doFilter(request, response);
 
-        if (resp.getStatus() == 200 && !servletPath.contains(".") && !(servletPath.startsWith("/admin")
-                || servletPath.startsWith("/restricted"))) {
+        if (resp.getStatus() == 200 &&
+                !servletPath.contains(".") &&
+                !servletPath.equals("/getphrase") &&
+                !(servletPath.startsWith("/admin") || servletPath.startsWith("/restricted"))) {
             statisticsService.increasePageVisits(servletPath);
         }
     }
