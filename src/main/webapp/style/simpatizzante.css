@@ -6,7 +6,7 @@ button {
     color: white;
     border: 2px solid darkslategray;
     padding: 30px 30px;
-    border-radius: 0px;
+    border-radius: 0;
     margin: 20px;
 }
 
@@ -88,4 +88,20 @@ input[type="checkbox" i] {
     padding: initial;
     border: initial;
     position: relative;
+}
+
+h1, .quotesection, a.dashboardoption, .contactstitle, .dashboardtext, .dashboardtitle, .headerlinks a{
+    color: #4a71b0;
+}
+
+.footer, button, div.buttonrow input.signupsubmit, .headerlinks a:hover{
+    background-color: #4a71b0;
+}
+
+.usermenuseparator, .usermenucontent a:hover, div.buttonrow input.signupsubmit:hover, a.dashboardoption:hover{
+    background-color: #7fabf8;
+}
+
+a.dashboardoption:hover {
+    border: 2px solid #4a71b0;
 }

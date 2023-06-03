@@ -1,15 +1,15 @@
 /*ho aggiunto questo file css perchè è richiesto di avere un css diverso per ogni profile utente, per ora la
 la grafica è tutta uguale, poi decideremo come cambiarla*/
 button {
-    background-color: #56cc75;
+    background-color: #FF4453;
     color: white;
-    border: 2px solid darkcyan;
+    border: 2px solid #861d25;
     padding: 30px 30px;
     border-radius: 20px;
     margin: 20px;
 }
 .content{
-    background-color: darkcyan;
+    background-color: rgba(134, 29, 37, 0.33);
 }
 
 .header {
@@ -56,4 +56,135 @@ a.dashboardoption:hover{
 
 .headerlinks a:hover {
     background-color: #FF4453;
+}
+
+.userlistcontent {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+
+.userlist{
+    width: 90%;
+    background-color: white;
+    border-radius: 0 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 6px 0 #ff828261;
+    margin-bottom: 60px;
+}
+
+.userlist:first-child{
+    display:none;
+}
+
+.userlistentry {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 65px;
+    width: 90%;
+    font-size: 18px;
+    justify-content: flex-start;
+}
+
+.userlistfilters{
+    display: flex;
+    width: 90%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+a.userlistoption {
+    background-color: white;
+    height: 60px;
+    width: 300px;
+    text-decoration: none;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    transition: 0.2s;
+    border-bottom: 3px solid #ff8d96;
+}
+
+a.userlistoption:hover {
+    background-color: #ff8c95;
+    color: #ffffff;
+}
+
+a.userlistoption.first{
+    border-radius: 5px 0 0 0;
+}
+
+a.userlistoption.last{
+    border-radius: 0 5px 0 0;
+}
+
+.userlistseparator {
+    background-color: #ffeff1;
+    height: 3px;
+    width: 91%;
+}
+
+.userlistmode {
+    width: 190px;
+    display: flex;
+    margin-left: 40px;
+}
+
+.miniseparator{
+    height: 70%;
+    width: 2px;
+    background-color: #ff8c95;
+}
+
+.userlistname {
+    width: 75%;
+    display: flex;
+}
+
+h1{
+    color: #FF4453;
+}
+
+.footer{
+    background-color: #FF4453;
+}
+
+.quotesection{
+    color: #FF4453;
+}
+
+.contactstitle{
+    color: #FF4453;
+}
+
+div.buttonrow input.signupsubmit {
+    background-color: #FF4453;
+}
+
+div.buttonrow input.signupsubmit:hover {
+    background-color: #ff8c95;
+}
+
+.chartcontainer{
+    height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart{
+    width: 65%;
+    height: 430px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px 0 #ff828261;
 }

@@ -9,10 +9,15 @@
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
 <div class="content">
-    <div id="chart" style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto">
+    <div class="chartcontainer">
+        <div id="chart" class="chart">
+        </div>
     </div>
 </div>
 
+<!--
+style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto"
+-->
 <script type="application/javascript" >
 
     const xhttp = new XMLHttpRequest();
@@ -22,7 +27,7 @@
                 chart: {
                     type: 'column'
                 },
-                colors: ['#008b8b'],
+                colors: ['#FF4453'],
                 title: {
                     text: 'Istogramma donazioni mensili'
                 },
