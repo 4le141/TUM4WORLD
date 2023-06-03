@@ -50,7 +50,7 @@ button {
 }
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-    background-color: cornflowerblue;
+    background-color: orange;
 }
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
@@ -73,6 +73,13 @@ button {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
 }
 .buttons input[type="reset"],
 .buttons input[type="submit"] {
