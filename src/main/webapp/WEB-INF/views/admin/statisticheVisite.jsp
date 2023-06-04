@@ -9,6 +9,11 @@
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
 <div class="content">
+    <div>Numero di visite: <span id="totalCount"> </span>
+        <form action="./resetStatistics" method="post">
+            <input class="signupreset" type="submit" value="Reset">
+        </form>
+    </div>
     <div class="chartcontainer">
         <div id="chart" class="chart">
         </div>
@@ -20,6 +25,7 @@
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if(this.readyState === 4 && this.status === 200) {
+            document.getElementById("totalCount").innerText=JSON.parse(this.response).totalCount
             Highcharts.chart('chart', {
                 chart: {
                     type: 'column'

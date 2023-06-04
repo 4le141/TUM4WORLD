@@ -2,6 +2,7 @@ package com.tum4world.tum4world.controller.servlets;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
 import com.tum4world.tum4world.model.PageStats;
 import com.tum4world.tum4world.model.StatisticsService;
 
@@ -26,12 +27,15 @@ public class StatisticheServlet extends HttpServlet {
         JsonArray pageNames = new JsonArray();
         JsonArray pageViewsCount = new JsonArray();
         List<PageStats> pageStats = service.getStatistics();
+        int totalCount = 0;
 
         for (PageStats s : pageStats) {
             pageNames.add(s.getPage());
             pageViewsCount.add(s.getViewCount());
+            totalCount += s.getViewCount();
         }
 
+        statistiche.add("totalCount", new JsonPrimitive(totalCount));
         statistiche.add("names", pageNames);
         statistiche.add("data", pageViewsCount);
         response.setContentType("application/json");

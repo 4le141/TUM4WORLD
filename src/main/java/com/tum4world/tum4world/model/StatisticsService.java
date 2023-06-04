@@ -9,18 +9,14 @@ import java.util.Set;
 
 public class StatisticsService {
 
-    private Set<String> alreadyInsertedPages;
+    private static Set<String> alreadyInsertedPages = new HashSet<>();
 
-    public StatisticsService() {
-        this.alreadyInsertedPages = new HashSet<>();
-    }
-
-    public List<PageStats> getStatistics(){
+    public List<PageStats> getStatistics() {
         List<PageStats> result = new ArrayList<>();
         try (Connection conn = DatabaseUtils.getConnection();
              Statement s = conn.createStatement();) {
             ResultSet rs = s.executeQuery("SELECT * FROM PAGE_STATISTICS");
-            while(rs.next()){
+            while (rs.next()) {
                 result.add(new PageStats(
                         rs.getString(1),
                         rs.getInt(2),
@@ -58,11 +54,21 @@ public class StatisticsService {
             ps.setTimestamp(3, new Timestamp(System.currentTimeMillis()));
             int affectedRows = ps.executeUpdate();
             return affectedRows == 1;
-        } catch (SQLIntegrityConstraintViolationException ex){
+        } catch (SQLIntegrityConstraintViolationException ex) {
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
+        }
+    }
+
+    public void deleteAll() {
+        try (Connection conn = DatabaseUtils.getConnection();
+             Statement s = conn.createStatement()) {
+             s.executeUpdate("DELETE FROM PAGE_STATISTICS");
+             alreadyInsertedPages.clear();
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
     }
 }
