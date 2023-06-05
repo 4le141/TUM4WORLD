@@ -14,6 +14,31 @@
     </div>
 
     <div class="userlist">
+        <div class="userlistentry" style="background-color: #ffe8e8; border-radius: 0 5px 0 0; color: #6c2626;">
+            <div class="userlistuname">
+                Nome Utente
+            </div>
+            <div class="miniseparator"></div>
+            <div class="userlistfname">
+                Nome
+            </div>
+            <div class="miniseparator"></div>
+            <div class="userlistemail">
+                Email
+            </div>
+            <div class="miniseparator"></div>
+            <div class="userlistbday">
+                Data di Nascita
+            </div>
+            <div class="miniseparator"></div>
+            <div class="userlistphone">
+                Numero di Telefono
+            </div>
+            <div class="miniseparator"></div>
+            <div class="userlistmode">
+                Tipo Account
+            </div>
+        </div>
     <%
         int c = 0;
         List<User> users = (List<User>) request.getAttribute("users");
@@ -25,20 +50,29 @@
 
         <div class="userlistentry">
 
-            <div class="userlistname">
-                <% out.print("• " +u.getUsername()); %>
+            <div class="userlistuname">
+                <%  out.print((u.getUsername() != null) ? "• " + u.getUsername() : "• - "); %>
+            </div>
+            <div class="miniseparator"></div>
+            <div class="userlistfname">
+                <%  out.print((u.getFirstname() != null) ? u.getFirstname() : "-"); %>
+                <%  out.print((u.getLastname() != null) ? " " + u.getLastname() : ""); %>
+            </div>
+            <div class="miniseparator"></div>
+            <div class="userlistemail">
+                <%  out.print((u.getEmail() != null) ? u.getEmail() : "-"); %>
+            </div>
+            <div class="miniseparator"></div>
+            <div class="userlistbday">
+                <%  out.print((u.getBirthday() != null) ? u.getBirthday() : "-"); %>
+            </div>
+            <div class="miniseparator"></div>
+            <div class="userlistphone">
+                <%  out.print((u.getPhone() != null) ? u.getPhone() : "-"); %>
             </div>
             <div class="miniseparator"></div>
             <div class="userlistmode">
-                <% out.print(u.getFirstname() + " " + u.getLastname()); %>
-            </div>
-            <div class="miniseparator"></div>
-            <div class="userlistmode">
-                <% out.print(u.getEmail()); %>
-            </div>
-            <div class="miniseparator"></div>
-            <div class="userlistmode">
-                <% out.print(u.getUserMode()); %>
+                <% out.print(u.getUserMode().toString()); %>
             </div>
         </div>
 
@@ -48,6 +82,7 @@
     %>
         </div>
 
+    <!--
     <table>
         <tr>
             <th>Username</th>
@@ -73,6 +108,7 @@
             }
         %>
     </table>
+    -->
 
 </div>
 

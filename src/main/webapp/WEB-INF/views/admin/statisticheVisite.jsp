@@ -9,14 +9,23 @@
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
 <div class="content">
-    <div>Numero di visite: <span id="totalCount"> </span>
-        <form action="./resetStatistics" method="post">
-            <input class="signupreset" type="submit" value="Reset">
-        </form>
-    </div>
+
     <div class="chartcontainer">
+
         <div id="chart" class="chart">
         </div>
+
+        <div class="visitscounter">
+            <div class="visitscountertext"> Numero di visite totali
+                <div class="visitsseparator"></div>
+                <span style="margin-top: 10px; font-size: 45px;" id="totalCount"> </span>
+            </div>
+
+            <form class="resetbutton" action="./resetStatistics" method="post">
+                <input class="signupreset" type="submit" value="Reset">
+            </form>
+        </div>
+
     </div>
 </div>
 

@@ -10,7 +10,7 @@
 
 <div class="content">
     <div class="chartcontainer">
-        <div id="chart" class="chart">
+        <div id="chart" class="chart" style="border-radius: 5px;">
         </div>
     </div>
 </div>
