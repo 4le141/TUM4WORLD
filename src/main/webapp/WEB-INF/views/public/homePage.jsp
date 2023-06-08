@@ -4,35 +4,39 @@
     <jsp:param name="title" value="Home" />
 </jsp:include>
 
-<div class="content">
+<div class="content" style="display:flex; justify-content: center; align-items: center;">
     <section class="home">
-        <div class="row">
-            <h1> HOMEPAGE </h1>
-        </div>
-        <img src="${pageContext.request.contextPath}/images/volontariato.jpg"
-             alt="Description Image" style="max-width: 50%">
-        <div class="row">
-            <p>L'Associazione TUM4WORLD &#232 una organizzazione di beneficenza,
+
+        <div class="homepageleft">
+
+            <div class="homepagetitle">
+                <div style="width:185px;">
+                    <img class="homepagelogo" src="${pageContext.request.contextPath}/images/logo.png" alt="Logo Image">
+                </div>
+                <div class="homepagemotto">
+                    <div class="homestandard"> Salva il tuo nuovo</div>
+                    <div class="homehighlight"> migliore amico</div>
+                </div>
+            </div>
+            <div class="homepageseparator"></div>
+            <div class="homepagedescription">
+                L'Associazione TUM4WORLD &#232 una organizzazione di beneficenza,
                 formata da un gruppo di giovani appassionati di animali e impegnati nella loro protezione.
                 L'obiettivo principale dell'associazione &#232 quello di sensibilizzare l'opinione pubblica sull'importanza
                 della tutela degli animali e promuovere azioni concrete a sostegno
-                della loro salute e del loro benessere. <br></p>
-        </div>
-        <div class="row">
-            <figure>
-                <img src="${pageContext.request.contextPath}/images/logo.png" alt="Logo Image"
-                     style="max-width: 20%">
-                <figcaption>Il nostro logo</figcaption>
-            </figure>
-        </div>
-        <div class="row">
-            <p> Per scaricare il nostro volantino<br>
-                <a href="${pageContext.request.contextPath}/pdf/volantino.pdf" download>
-                    <button> clicca qui</button>
+                della loro salute e del loro benessere.
+            </div>
+            <div class="homepagedownload">
+                <a  href="${pageContext.request.contextPath}/pdf/volantino.pdf" download>
+                    Scarica il nostro Volantino!
                 </a>
+            </div>
 
-            </p>
         </div>
+        <div class="homepageright">
+            <img class="homepageimage" src="${pageContext.request.contextPath}/images/volontariato.jpg" alt="Description Image">
+        </div>
+
         <div id="popup">
             <img src="${pageContext.request.contextPath}/images/cookie.jpg" alt="Immagine dei cookies" class="left"
                  style="width: 10%"/>

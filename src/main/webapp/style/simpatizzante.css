@@ -105,3 +105,19 @@ h1, .quotesection, a.dashboardoption, .contactstitle, .dashboardtext, .dashboard
 a.dashboardoption:hover {
     border: 2px solid #4a71b0;
 }
+
+.homepagedownload {
+    background-color: #7fabf8;
+}
+
+.homepagedownload:hover a{
+    color: #7fabf8;
+}
+
+section.home {
+    background-color: #4a71b0
+}
+
+.homestandard{
+    color: #1b355d;
+}

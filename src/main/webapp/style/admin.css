@@ -284,3 +284,20 @@ div.buttonrow input.signupsubmit:hover {
 .resetbutton input:hover{
     background-color: #fd717a;
 }
+
+
+.homepagedownload {
+    background-color:  #ff999f;
+}
+
+.homepagedownload:hover a{
+    color: #ff999f;
+}
+
+section.home {
+    background-color: #FF4453;
+}
+
+.homestandard{
+    color: #721f25;
+}

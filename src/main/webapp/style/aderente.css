@@ -236,3 +236,20 @@ h1, .quotesection, a.dashboardoption, .contactstitle, .dashboardtext, .dashboard
 a.dashboardoption:hover {
     border: 2px solid #EB7E10;
 }
+
+
+.homepagedownload {
+    background-color:  #ffaf6e;
+}
+
+.homepagedownload:hover a{
+    color: #ffaf6e;
+}
+
+section.home {
+    background-color: #EB7E10;
+}
+
+.homestandard{
+    color: #793e07;
+}
