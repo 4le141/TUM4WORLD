@@ -3,13 +3,14 @@
     <jsp:param name="title" value="Dona"/>
 </jsp:include>
 <div class="donation-container">
-    <form action="<% out.print(response.encodeURL("./dona")); %>" method="post">
-    <h2>Fai una donazione</h2>
+    <form class="donationformcontainer" action="<% out.print(response.encodeURL("./dona")); %>" method="post">
+    <h2 class="donationtext">Fai una donazione</h2>
+    <div class="donationseparator"></div>
     <div class="input-container">
-        <span class="currency-symbol">&#8364</span> <%-- fidati ma è il simbolo dell'euro --%>
-        <input type="number" id="amount" name="amount" value="1" step="0.01" min="0.01" required>
+        <input class="donationvalue" type="number" id="amount" name="amount" value="1" step="0.01" min="0.01" required>
+        <span class="donationcurrency">&#8364</span> <%-- fidati ma è il simbolo dell'euro --%>
     </div>
-    <input type="submit" value="Dona">
+        <input class="donationsubmit" type="submit" value="Dona">
     </form>
 </div>
 <%--

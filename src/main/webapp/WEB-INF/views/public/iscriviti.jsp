@@ -15,9 +15,9 @@
         let valido = true;
 
 //validazione password
-        let password = document.forms["signup-form"]["password"].value;
-        let password2 = document.forms["signup-form"]["repeat-password"].value;
-        let errormessage = password + " " + password2 + "\n";
+        //let password = document.forms["signup-form"]["password"].value;
+        //let password2 = document.forms["signup-form"]["repeat-password"].value;
+        //let errormessage = password + " " + password2 + "\n";
 
         if(password != password2){
             alert("Le due password non coincidono!");

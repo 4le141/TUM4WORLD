@@ -1,7 +1,7 @@
 /*ho aggiunto questo file css perchè è richiesto di avere un css diverso per ogni profile utente, per ora la
 la grafica è tutta uguale, poi decideremo come cambiarla*/
 button {
-    background-color: #56cc75;
+    background-color: #EB7E10;
     color: white;
     border: 2px solid darkgray;
     padding: 30px 30px;
@@ -74,19 +74,13 @@ button {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
+
 .buttons input[type="reset"],
 .buttons input[type="submit"] {
     font-size: 14px;
     border: none;
     cursor: pointer;
-    background-color: #56cc75;
+    background-color: #EB7E10;
     color: white;
     padding: 10px 20px;
     border-radius: 50px;
@@ -94,7 +88,7 @@ button {
 
 /* robe per la pagina della donazione */
 .donation-container {
-    width: 300px;
+    width: 350px;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -109,15 +103,73 @@ button {
     color: #666;
 }
 .input-container {
-    display: inline-block;
     position: relative;
+    display: flex;
+    width: 160px;
+    height: 60px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 3px 1px #e0e0e087;
+    align-items: center;
+    justify-content: flex-end;
 }
-.currency-symbol {
-    position: absolute;
-    left: 5px;
-    top: 50%;
-    transform: translateY(-50%);
+
+input[type="number"].donationvalue{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: unset;
+    opacity: 1;
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield;
+    border:none;
+    box-shadow: none;
+    margin-left: 20px;
+    font-size: 25px;
+    color: #782600;
 }
+
+.donationseparator{
+    width: 70%;
+    background-color: #ffbe7b;
+    margin-bottom: 20px;
+    height: 2px;
+}
+
+.donationformcontainer{
+    color: #EB7E10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+span.donationcurrency {
+    margin-right: 15px;
+    color: #b9b9b9;
+    font-size: 25px;
+}
+
+.donationformcontainer h2{
+    color: #EB7E10;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 35px;
+}
+
+input[type="submit"].donationsubmit {
+    font-size: 20px;
+    width: 160px;
+    border-radius: 5px;
+    height: 50px;
+    transition: 0.2s;
+}
+
+input[type="submit"].donationsubmit:hover {
+    background-color: #ffbe7b;
+}
+
 input[type="number"] {
     width: 150px;
     padding: 10px 10px 10px 25px;
