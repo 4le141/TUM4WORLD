@@ -29,6 +29,7 @@
         <servlet-name>IscrizioneConfermataPage</servlet-name>
         <jsp-file>/WEB-INF/views/public/iscrizioneConfermata.jsp</jsp-file>
     </servlet>
+
     <servlet>
         <servlet-name>Attivita1Page</servlet-name>
         <jsp-file>/WEB-INF/views/public/3attivita/attivita1.jsp</jsp-file>
@@ -94,6 +95,7 @@
         <servlet-name>IscrizioneConfermataPage</servlet-name>
         <url-pattern>/iscrizioneconfermata</url-pattern>
     </servlet-mapping>
+
 
     <servlet-mapping>
         <servlet-name>Attivita1Page</servlet-name>

@@ -143,4 +143,13 @@ public class UserService {
         u.setUserMode(User.UserMode.valueOf(rs.getString(8)));
         return u;
     }
+    public void deleteUser(String username) {
+        try (Connection conn = DatabaseUtils.getConnection()){
+             PreparedStatement ps = conn.prepareStatement("DELETE FROM USERS WHERE USERNAME=?");
+            ps.setString(1, username);
+            ps.executeUpdate();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
 }

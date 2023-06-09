@@ -26,6 +26,11 @@
     <div class="profile-info">
         <label>Iscritto al nostro sito come: ${sessionScope.user.userMode}</label>
     </div>
+    <div class="profile-info">
+        <form class="resetbutton" action="./deleteprofile" method="post">
+            <input type="submit" value="Cancella Iscrizione">
+        </form>
+    </div>
 </div>
 
 <jsp:include page="/WEB-INF/views/footer.jsp"/>

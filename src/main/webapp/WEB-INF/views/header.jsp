@@ -52,6 +52,10 @@
                 <a href="<% out.print(response.encodeURL(request.getContextPath()+"/login")); %>">Login</a>
                 <a href="<% out.print(response.encodeURL(request.getContextPath()+"/iscriviti")); %>">Iscriviti</a>
             <%
+                }else {
+            %>
+            <p> Benvenuto  ${sessionScope.user.username}</p>
+            <%
                 }
             %>
         </div>
