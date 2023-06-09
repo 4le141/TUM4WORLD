@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="row">
-            <h2> Iscriviti alle nostre attivit&#224 à </h2>
+            <h2> Iscriviti alle nostre attività </h2>
         </div>
         <form action="<% out.print(response.encodeURL("")); %>" method="post">
         <label class="container">Prenditi cura dei cani
@@ -55,25 +55,6 @@
         <div class="row" >
             <p style="visibility: ${requestScope.success ? 'visible' : 'hidden' }">Cambiamenti aggiornati</p>
         </div>
-
-        <%-- TODO sistemare il bottone brutto--%>
-            <%--
-        <div class="row">
-            <form action="" method="post">
-                <input type="checkbox" id="iscrizioneAttivita1"
-                       name="attivita1"${requestScope.activities.activity1 ? 'checked' : ''} >
-                <p>Prenditi cura dei cani</p> <br>
-                <input type="checkbox" id="iscrizioneAttivita2"
-                       name="attivita2" ${requestScope.activities.activity2 ? 'checked' : ''}>
-                <p>Prenditi cura dei gatti</p> <br>
-                <input type="checkbox" id="iscrizioneAttivita3"
-                       name="attivita3"${requestScope.activities.activity3 ? 'checked' : ''}>
-                <p>Visita le scuole</p> <br>
-                <p style="visibility: ${requestScope.success ? 'visible' : 'hidden' }">Iscrizione confermata!</p>
-
-                <input class="buttons" type="submit" value="Iscriviti">
-            </form>
-        </div>--%>
     </section>
 </div>
 <script>

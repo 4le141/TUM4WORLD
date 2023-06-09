@@ -19,7 +19,7 @@
             <br>
         </p>
 
-        <p>I membri dell'Associazione, fondata a maggio 2023 da i rappresentanti Mirco, Alessia, Anna e Federeica, sono
+        <p>I membri dell'Associazione, fondata a maggio 2023 da i rappresentanti Mirco, Alessia, Anna e Federica, sono
             giovani appassionati di ogni et&#224, uniti dal desiderio di
             fare la differenza nella
             vita degli animali e di rendere il mondo un posto migliore per loro. Grazie alla loro energia e alla loro
