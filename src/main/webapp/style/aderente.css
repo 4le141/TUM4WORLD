@@ -148,35 +148,6 @@ input[type="submit"] {
     cursor:pointer
 }
 
-
-/* robe per la pagina del profilo */
-.profile-container { /* il contenitore che contiene le info del profilo */
-    width: 400px;
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.profile-container h2 { /* il titolo del contenitore */
-    margin-bottom: 20px;
-    color: #666;
-}
-.profile-info { /* il dato singolo */
-    margin-bottom: 10px;
-}
-.profile-info label { /* la scritta del dato singolo */
-    /*width: 350px;*/
-    font-weight: bold;
-    /*color: #666;*/
-    text-align: left;
-    margin-top: 5px;
-    /*line-height: 1.5px;*/
-    font-size: 22px;
-}
-
 h1, .quotesection, a.dashboardoption, .contactstitle, .dashboardtext, .dashboardtitle, .headerlinks a{
     color: #EB7E10;
 }
@@ -208,4 +179,25 @@ section.home {
 
 .homestandard{
     color: #793e07;
+}
+
+/*style pagina profilo*/
+.profile-container {
+    background-color:#d09a547f;
+}
+
+.profileseparator {
+    background-color: #EB7E10;
+}
+
+.profiletitle {
+    color: #EB7E10;
+}
+
+.profile-info.odd{
+    background-color: #fff2e7;
+}
+
+.profileinfotitle {
+    color: #EB7E10;
 }

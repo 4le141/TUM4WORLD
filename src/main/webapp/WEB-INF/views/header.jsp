@@ -52,11 +52,7 @@
                 <a href="<% out.print(response.encodeURL(request.getContextPath()+"/login")); %>">Login</a>
                 <a href="<% out.print(response.encodeURL(request.getContextPath()+"/iscriviti")); %>">Iscriviti</a>
             <%
-                }else {
-            %>
-            <p> Benvenuto  ${sessionScope.user.username}</p>
-            <%
-                }
+                }else
             %>
         </div>
     </div>
@@ -96,7 +92,7 @@
     <div id="menu" class="usermenu">
 
         <div class="usermenubutton" onclick="togglemenu();">
-                ${sessionScope.user.username}
+            <div style="font-size: 23px;">${sessionScope.user.username}</div>
             <img src="${pageContext.request.contextPath}/images/usericon.jpg" alt="Header Logo">
         </div>
 

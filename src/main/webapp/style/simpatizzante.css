@@ -23,17 +23,26 @@ button {
     color:#4a71b0;
 }
 /*style pagina profilo*/
-.profile-container{
-    background-color:#4694AF;
-    padding: 40px;
+.profile-container {
+    background-color: #c0dce8b8;
 }
-.profile-info label{
-    text-align: center;
-    color: #efffff;
-    font-size: 20px;
-    font-style:italic;
-    font-weight:bolder;
+
+.profileseparator {
+    background-color: #4a71b0;
 }
+
+.profiletitle {
+    color: #4a71b0;
+}
+
+.profile-info.odd{
+    background-color: #eef6ff;
+}
+
+.profileinfotitle {
+    color: #4a71b0;
+}
+
 h1{
     color:#073870;
     text-align:center;
