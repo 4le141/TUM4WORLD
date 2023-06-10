@@ -88,11 +88,13 @@
 <%
     if(isUserLogged) {
         User.UserMode userMode = user.getUserMode();
+        String username = user.getUsername();
 %>
     <div id="menu" class="usermenu">
 
         <div class="usermenubutton" onclick="togglemenu();">
-            <div style="font-size: 23px;">${sessionScope.user.username}</div>
+            <div style="font-size: 23px;"> Benvenuto <%= username %></div>
+
             <img src="${pageContext.request.contextPath}/images/usericon.jpg" alt="Header Logo">
         </div>
 
