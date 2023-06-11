@@ -59,7 +59,7 @@
     <div class="confirmwrapper">
         <div class="confirmwarning">Questa azione non è reversibile!</div>
         <div class="confirmtext">Sei sicuro di voler cancellare la tua iscrizione al sito?</div>
-        <form class="confirmbuttonrow" action="./deleteprofile" method="post">
+        <form class="confirmbuttonrow" action="<% out.print(response.encodeURL("deleteprofile")); %>" method="post">
             <input class="confirmyes" type="submit" value="Conferma">
             <div class="confirmno" onclick="closeconfirm()" >
                 Torna Indietro

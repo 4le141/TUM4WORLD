@@ -13,13 +13,5 @@
         <input class="donationsubmit" type="submit" value="Dona">
     </form>
 </div>
-<%--
-<div class="content">
-    <form action="./dona" method="post">
-        <label for="amount">Importo (Euro):</label>
-        <input type="number" id="amount" name="amount" step="0.01" min="0.01" required>
-        <input type="submit" value="Dona">
-    </form>
-</div> --%>
 
 <jsp:include page="/WEB-INF/views/footer.jsp"/>

@@ -26,7 +26,7 @@ public class UserActivitiesService {
         return result;
     }
 
-    public void insertUserActivities(UserActivities activities){
+    public void insertUserActivities(UserActivities activities) {
         try (Connection conn = DatabaseUtils.getConnection();) {
             PreparedStatement ps = conn.prepareStatement("INSERT INTO ACTIVITIES VALUES (?,?,?,?)");
             ps.setString(1, activities.getUsername());
@@ -39,7 +39,7 @@ public class UserActivitiesService {
         }
     }
 
-    public boolean updateUserActivities(UserActivities activities){
+    public boolean updateUserActivities(UserActivities activities) {
         try (Connection conn = DatabaseUtils.getConnection();) {
             PreparedStatement ps = conn.prepareStatement("UPDATE ACTIVITIES SET activity1=?, activity2=?, activity3=? WHERE username=?");
             ps.setBoolean(1, activities.isActivity1());

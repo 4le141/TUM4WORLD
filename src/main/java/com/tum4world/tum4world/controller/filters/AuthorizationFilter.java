@@ -1,7 +1,6 @@
 package com.tum4world.tum4world.controller.filters;
 
-import com.tum4world.tum4world.model.StatisticsService;
-import com.tum4world.tum4world.model.User;
+import com.tum4world.tum4world.model.*;
 
 import javax.servlet.*;
 import javax.servlet.annotation.*;
@@ -17,6 +16,21 @@ public class AuthorizationFilter implements Filter {
 
     public void init(FilterConfig config) throws ServletException {
         statisticsService = new StatisticsService();
+
+        DatabaseUtils.createUsersTable();
+        DatabaseUtils.createActivitiesTable();
+        DatabaseUtils.createDonationsTable();
+        DatabaseUtils.createPageStatisticsTable();
+
+        UserService userService = new UserService();
+        UserActivitiesService userActivitiesService = new UserActivitiesService();
+        for (User u : UserService.defaultUsers) {
+            if (!userService.userNameAlreadyExists(u.getUsername())) {
+                userService.insertUser(u);
+                userActivitiesService.insertUserActivities(new UserActivities(u.getUsername()));
+            }
+        }
+        UserService.defaultUsers.clear();
     }
 
     public void destroy() {

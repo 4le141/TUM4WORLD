@@ -14,9 +14,9 @@ public class Donazione {
 
     private BigDecimal amount;
 
-   private String username;
+    private String username;
 
-   private LocalDateTime dateTime;
+    private LocalDateTime dateTime;
 
     public BigDecimal getAmount() {
         return amount;

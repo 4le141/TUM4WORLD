@@ -35,7 +35,7 @@
         <div class="row">
             <h2> Iscriviti alle nostre attività </h2>
         </div>
-        <form action="<% out.print(response.encodeURL("")); %>" method="post">
+        <form action="<% out.print(response.encodeURL("iscriviti")); %>" method="post">
         <label class="container">Prenditi cura dei cani
             <input type="checkbox" id="iscrizioneAttivita1" name="attivita1"${requestScope.activities.activity1 ? 'checked' : ''} >
             <span class="checkmark"></span>

@@ -21,7 +21,7 @@
                 <span style="margin-top: 10px; font-size: 45px;" id="totalCount"> </span>
             </div>
 
-            <form class="resetbutton" action="./resetStatistics" method="post">
+            <form class="resetbutton" action="<% out.print(response.encodeURL("resetStatistics")); %>" method="post">
                 <input class="signupreset" type="submit" value="Reset">
             </form>
         </div>

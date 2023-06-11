@@ -2,7 +2,7 @@ package com.tum4world.tum4world.model;
 
 public class UserActivities {
 
-    public UserActivities(String username){
+    public UserActivities(String username) {
         this.username = username;
     }
 

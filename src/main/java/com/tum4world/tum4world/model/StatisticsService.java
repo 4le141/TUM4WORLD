@@ -65,8 +65,8 @@ public class StatisticsService {
     public void deleteAll() {
         try (Connection conn = DatabaseUtils.getConnection();
              Statement s = conn.createStatement()) {
-             s.executeUpdate("DELETE FROM PAGE_STATISTICS");
-             alreadyInsertedPages.clear();
+            s.executeUpdate("DELETE FROM PAGE_STATISTICS");
+            alreadyInsertedPages.clear();
         } catch (Exception ex) {
             ex.printStackTrace();
         }

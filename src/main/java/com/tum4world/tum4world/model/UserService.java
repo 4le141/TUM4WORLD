@@ -1,7 +1,5 @@
 package com.tum4world.tum4world.model;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.math.BigDecimal;
 import java.sql.*;
 import java.time.LocalDate;
@@ -13,16 +11,19 @@ import java.util.stream.Collectors;
 
 public class UserService {
 
-    private List<User> users;
+    public static List<User> defaultUsers;
 
-    public UserService(){
-        users = new ArrayList<>();
+    static {
+        defaultUsers = new ArrayList<>();
         User admin = new User();
         admin.setUsername("admin");
         admin.setPassword("24Adm1n!");
         admin.setUserMode(User.UserMode.AMMINISTRATORE);
         admin.setFirstname("Admin");
         admin.setLastname("");
+        admin.setPhone("0000000000");
+        admin.setEmail("admin@tum4world.com");
+        admin.setBirthday("1980-01-01");
 
         User aderente = new User();
         aderente.setUsername("aderente");
@@ -30,6 +31,9 @@ public class UserService {
         aderente.setUserMode(User.UserMode.ADERENTE);
         aderente.setFirstname("Aderente");
         aderente.setLastname("");
+        aderente.setPhone("0000000000");
+        aderente.setEmail("aderente@tum4world.com");
+        aderente.setBirthday("1980-01-01");
 
         User simpatizzante = new User();
         simpatizzante.setUsername("simpatizzante");
@@ -37,12 +41,15 @@ public class UserService {
         simpatizzante.setUserMode(User.UserMode.SIMPATIZZANTE);
         simpatizzante.setFirstname("Simpatizzante");
         simpatizzante.setLastname("");
+        simpatizzante.setPhone("0000000000");
+        simpatizzante.setEmail("simpatizzante@tum4world.com");
+        simpatizzante.setBirthday("1980-01-01");
 
-        users.addAll(Arrays.asList(admin, simpatizzante, aderente));
+        defaultUsers.addAll(Arrays.asList(admin, simpatizzante, aderente));
     }
 
     public User login(String username, String password) {
-        for (User u : users) {
+        for (User u : defaultUsers) {
             if (u.getUsername().equals(username) && u.getPassword().equals(password)) {
                 return u;
             }
@@ -52,7 +59,7 @@ public class UserService {
             ps.setString(1, username);
             ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
-            if(rs.next()){
+            if (rs.next()) {
                 return resultSetToUser(rs);
             }
         } catch (Exception ex) {
@@ -75,15 +82,16 @@ public class UserService {
             ps.executeUpdate();
         } catch (Exception ex) {
             ex.printStackTrace();
-            users.add(user);
+            defaultUsers.add(user);
         }
     }
-    public static void insertDonazione(User user,  BigDecimal dona) {
+
+    public static void insertDonazione(User user, BigDecimal dona) {
         try (Connection conn = DatabaseUtils.getConnection();) {
             PreparedStatement ps = conn.prepareStatement("INSERT INTO DONATIONS values (?,?,?)");
             ps.setBigDecimal(1, dona);
             ps.setString(2, user.getUsername());
-            ps.setTimestamp(3,Timestamp.valueOf(LocalDateTime.now()));
+            ps.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
 
             ps.executeUpdate();
         } catch (Exception ex) {
@@ -91,10 +99,7 @@ public class UserService {
         }
     }
 
-    public boolean userNameAlreadyExists(String username){
-        if(users.stream().map(User::getUsername).anyMatch(u -> u.equals(username))){
-            return true;
-        }
+    public boolean userNameAlreadyExists(String username) {
         try (Connection conn = DatabaseUtils.getConnection()) {
             PreparedStatement ps = conn.prepareStatement("SELECT username from USERS where username=?");
             ps.setString(1, username);
@@ -109,21 +114,19 @@ public class UserService {
     public List<User> listUsers(User.UserMode userMode) {
         List<User> users = new ArrayList<>();
         String query = "SELECT * FROM USERS";
-        if(userMode == User.UserMode.ADERENTE){
+        if (userMode == User.UserMode.ADERENTE) {
             query += " WHERE usermode='ADERENTE'";
-            users.addAll(this.users.stream().filter(user -> user.getUserMode().equals(User.UserMode.ADERENTE)).collect(Collectors.toList()));
-        }
-        else if(userMode == User.UserMode.SIMPATIZZANTE){
+            users.addAll(this.defaultUsers.stream().filter(user -> user.getUserMode().equals(User.UserMode.ADERENTE)).collect(Collectors.toList()));
+        } else if (userMode == User.UserMode.SIMPATIZZANTE) {
             query += " WHERE usermode='SIMPATIZZANTE'";
-            users.addAll(this.users.stream().filter(user -> user.getUserMode().equals(User.UserMode.SIMPATIZZANTE)).collect(Collectors.toList()));
-        }
-        else if(userMode == null){
-            users.addAll(this.users);
+            users.addAll(this.defaultUsers.stream().filter(user -> user.getUserMode().equals(User.UserMode.SIMPATIZZANTE)).collect(Collectors.toList()));
+        } else if (userMode == null) {
+            users.addAll(this.defaultUsers);
         }
         try (Connection conn = DatabaseUtils.getConnection();
-        Statement s = conn.createStatement()) {
+             Statement s = conn.createStatement()) {
             ResultSet rs = s.executeQuery(query);
-            while(rs.next()){
+            while (rs.next()) {
                 users.add(resultSetToUser(rs));
             }
         } catch (Exception ex) {
@@ -143,9 +146,10 @@ public class UserService {
         u.setUserMode(User.UserMode.valueOf(rs.getString(8)));
         return u;
     }
+
     public void deleteUser(String username) {
-        try (Connection conn = DatabaseUtils.getConnection()){
-             PreparedStatement ps = conn.prepareStatement("DELETE FROM USERS WHERE USERNAME=?");
+        try (Connection conn = DatabaseUtils.getConnection()) {
+            PreparedStatement ps = conn.prepareStatement("DELETE FROM USERS WHERE USERNAME=?");
             ps.setString(1, username);
             ps.executeUpdate();
         } catch (Exception ex) {
