@@ -17,20 +17,24 @@ public class AuthorizationFilter implements Filter {
     public void init(FilterConfig config) throws ServletException {
         statisticsService = new StatisticsService();
 
-        DatabaseUtils.createUsersTable();
-        DatabaseUtils.createActivitiesTable();
-        DatabaseUtils.createDonationsTable();
-        DatabaseUtils.createPageStatisticsTable();
+        try {
+            DatabaseUtils.createUsersTable();
+            DatabaseUtils.createActivitiesTable();
+            DatabaseUtils.createDonationsTable();
+            DatabaseUtils.createPageStatisticsTable();
 
-        UserService userService = new UserService();
-        UserActivitiesService userActivitiesService = new UserActivitiesService();
-        for (User u : UserService.defaultUsers) {
-            if (!userService.userNameAlreadyExists(u.getUsername())) {
-                userService.insertUser(u);
-                userActivitiesService.insertUserActivities(new UserActivities(u.getUsername()));
+            UserService userService = new UserService();
+            UserActivitiesService userActivitiesService = new UserActivitiesService();
+            for (User u : UserService.defaultUsers) {
+                if (!userService.userNameAlreadyExists(u.getUsername())) {
+                    userService.insertUser(u);
+                    userActivitiesService.insertUserActivities(new UserActivities(u.getUsername()));
+                }
             }
+            UserService.defaultUsers.clear();
+        } catch (Exception ex) {
+            System.err.print(ex);
         }
-        UserService.defaultUsers.clear();
     }
 
     public void destroy() {
