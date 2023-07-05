@@ -63,6 +63,9 @@ public class AuthorizationFilter implements Filter {
                     resp.sendRedirect(resp.encodeRedirectURL("restricted/home"));
                     return;
             }
+        } else if (servletPath.equals("/restricted/dona") && (user == null || user.getUserMode() != User.UserMode.ADERENTE)) {
+            resp.sendRedirect(req.getContextPath() + "/login");
+            return;
         }
 
         chain.doFilter(request, response);

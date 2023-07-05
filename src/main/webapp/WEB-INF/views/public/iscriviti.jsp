@@ -19,7 +19,7 @@
         let password2 = document.forms["signup-form"]["repeat-password"].value;
         let errormessage = password + " " + password2 + "\n";
 
-        if(password != password2){
+        if(password !== password2){
             alert("Le due password non coincidono!");
             return false;
         }

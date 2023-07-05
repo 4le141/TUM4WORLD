@@ -125,7 +125,6 @@
     </servlet-mapping>
 
 
-
     <servlet-mapping>
         <servlet-name>DonazioniAdmin</servlet-name>
         <url-pattern>/admin/donazioni</url-pattern>
