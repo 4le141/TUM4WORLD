@@ -4,108 +4,14 @@
     <jsp:param name="title" value="Iscriviti"/>
 </jsp:include>
 
-<script>
-    const regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-    const initialsExpression = /[amf]/i
-    const uppercaseExpression = /[A-Z]/
-    const numberExpression = /[0-9]/
-    const specialsExpression = /[?!$]/
 
-    function validateForm() {
-        let valido = true;
-
-//validazione password
-        let password = document.forms["signup-form"]["password"].value;
-        let password2 = document.forms["signup-form"]["repeat-password"].value;
-        let errormessage = password + " " + password2 + "\n";
-
-        if(password !== password2){
-            alert("Le due password non coincidono!");
-            return false;
-        }
-
-        if(password.length != 8){
-            errormessage+= "La password deve essere lunga 8 caratteri.\n";
-            valido=false;
-        }
-
-        if (!initialsExpression.test(password)) {
-            errormessage+= "La password deve contenere almeno una delle seguenti lettere: M, F, A.\n";
-            valido=false;
-        }
-
-        if (!numberExpression.test(password)) {
-            errormessage+= "La password deve contenere almeno un numero.\n";
-            valido=false;
-        }
-
-        if (!uppercaseExpression.test(password)) {
-            errormessage+= "La password deve contenere almeno un carattere maiuscolo.\n";
-            valido=false;
-        }
-
-        if (!specialsExpression.test(password)) {
-            errormessage+= "La password deve contenere almeno un carattere tra $, ! e ?. \n";
-            valido=false;
-        }
-
-        if(!valido){
-            alert(errormessage);
-        }
-
-    //verifica campi non vuoti
-        let nome=document.getElementById("firstname");
-        let cognome=document.getElementById("lastname");
-        let email=document.getElementById("email");
-        let username=document.getElementById("username");
-        let data=document.getElementById("birthday").value;
-        let telefono=document.getElementById("phone");
-
-        if (nome.value===""){
-            alert("Il campo nome non può essere vuoto");
-            valido=false;
-        }
-            if (cognome.value===""){
-            alert("Il campo cognome non può essere vuoto");
-            valido=false;
-        }
-        if (email.value===""){
-            alert("Il campo email  non può essere vuoto");
-            valido=false;
-        }
-        if (telefono.value===""){
-            alert("Il campo telefono non può essere vuoto");
-            valido=false;
-        }
-        if (username.value===""){
-            alert("Il campo username non può essere vuoto");
-            valido=false;
-        }
-        if (data.value==="") {
-            alert("Il campo data di nascita non può essere vuoto");
-            valido = false;
-        }
-        //verifico che l'utente sia maggiorenne
-        let oggi=new Date();
-        let dataNascita=document.getElementById("birthday").value;
-        let dataUser=new Date(dataNascita);
-        let anni=oggi.getFullYear()-dataUser.getFullYear();
-        let mesi=oggi.getMonth()-dataUser.getMonth();
-        let giorni=oggi.getDate()-dataUser.getDate();
-        if (anni<18 || (anni===18 && mesi<0) ||(anni===18 && mesi<0 && giorni<0)){
-            alert("Utente non maggiorenne");
-            valido=false;
-        }
-        return valido;
-    }
-</script>
 
 <div class="signup-content backgroundImage">
     <div class="row">
         <h1>Iscriviti</h1>
     </div>
     <div class="signupwrapper">
-        <form class="signup-form" onsubmit="return validateForm()" name="signup-form" method="post"
+        <form class="signup-form" onsubmit="return validateFormForIscriviti() && ValidateEmailSignup()" name="signup-form" method="post"
               action="./iscriviti">
 
             <label for="firstname" class="form-label">Nome</label>
@@ -126,7 +32,8 @@
 
             <label for="email" class="form-label">Email</label>
             <div class="inputfield">
-                <input type="email" name="email" id="email" >
+                <input  name="email" id="email" style="width: 100%; padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px; margin-right: 5px;"
+                >
             </div>
 
             <label class="form-label">Iscriviti Come:</label>

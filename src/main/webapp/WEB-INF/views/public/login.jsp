@@ -12,16 +12,16 @@
         <div class="errormessage" style="display: ${error ? 'flex' : 'none'};">
             Username o Password errati!
         </div>
-        <form class="signup-form" method="post" action="<% out.print(response.encodeURL("./login")); %>">
+        <form class="signup-form" method="post" action="<% out.print(response.encodeURL("./login")); %>" onsubmit="return requiredFunctionForLogin()">
 
             <label for="username" class="form-label">Nome Utente</label>
             <div class="inputfield">
-                <input type="text" name="username" id="username" required>
+                <input type="text" name="username" id="username" >
             </div>
 
             <label for="password" class="form-label">Password</label>
             <div class="inputfield">
-                <input type="password" name="password" id="password" required>
+                <input type="password" name="password" id="password" >
             </div>
 
             <div class="buttonrow">

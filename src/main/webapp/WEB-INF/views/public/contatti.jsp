@@ -38,7 +38,7 @@
             <div class="contactstitle">
                 Scrivici!
             </div>
-            <form class="signup-form" onsubmit="return requiredFunction()" action="./sendmailservlet" method="post" id="contatti">
+            <form class="signup-form" name="contacts" onsubmit="return requiredFunctionForContatti() && ValidateEmailContacts()" action="./sendmailservlet" method="post" id="contatti">
 
                 <label for="firstname" class="form-label">Nome</label>
                 <div class="fullnamefield">
@@ -46,9 +46,10 @@
                     <input type="text" name="lastname" id="lastname" placeholder="Cognome" >
                 </div>
 
-                <label for="email" class="form-label">Email</label>
+                <label for="email" class="form-label" >Email</label>
                 <div class="inputfield">
-                    <input type="email" name="email" id="email">
+                    <input name="email" id="email" style="width: 100%; padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px; margin-right: 5px;"
+                    >
                 </div>
 
                 <label for="reason" class="form-label">Motivo di contatto </label>
@@ -76,44 +77,6 @@
 
     </section>
 </div>
-<script>
-    function ValidateEmail() {
-        let email = document.forms["contacts"]["email"].value;
-        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        if (mailformat.test(email)) {
-            return true;
-        } else {
-            alert("Formato email non valido")
-            return false;
-        }
-    }
-</script>
-<script>
-    function requiredFunction(){
-        let nome=document.getElementById("firstname");
-        let cognome=document.getElementById("lastname");
-        let email=document.getElementById("email");
-        let motivo=document.getElementById("reason");
-        let valido=true;
-        if (nome.value===""){
-            alert("Il campo nome non può essere vuoto");
-            valido=false;
-        }
-        if (cognome.value===""){
-            alert("Il campo cognome non può essere vuoto");
-            valido=false;
-        }
-        if (email.value===""){
-            alert("Il campo email  non può essere vuoto");
-            valido=false;
-        }
-        if (motivo.value===""){
-            alert("Il campo motivazione di contatto non può essere vuoto");
-            valido=false;
-        }
-        return valido;
-    }
-</script>
 
 
 <jsp:include page="/WEB-INF/views/footer.jsp"/>
