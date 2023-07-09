@@ -104,6 +104,9 @@ function validateFormForIscriviti() {
     if (email.value === "") {
         alert("Il campo email  non può essere vuoto");
         valido = false;
+    } else if(!ValidateEmailSignup()){
+        alert("Formato email non valido")
+        valido = false;
     }
     if (telefono.value === "") {
         alert("Il campo telefono non può essere vuoto");
@@ -149,7 +152,6 @@ function ValidateEmailSignup() {
     if (mailformat.test(email)) {
         return true;
     } else {
-        alert("Formato email non valido")
         return false;
     }
 }

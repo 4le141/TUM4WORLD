@@ -11,7 +11,7 @@
         <h1>Iscriviti</h1>
     </div>
     <div class="signupwrapper">
-        <form class="signup-form" onsubmit="return validateFormForIscriviti() && ValidateEmailSignup()" name="signup-form" method="post"
+        <form class="signup-form" onsubmit="return validateFormForIscriviti()" name="signup-form" method="post"
               action="./iscriviti">
 
             <label for="firstname" class="form-label">Nome</label>
