@@ -1,3 +1,30 @@
+/* stile per pagina attività */
+/* stile colonne */
+.attivita .column {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+/* stile header delle attività */
+.attivita .column h2 {
+    font-size: 21px;
+    margin-top: 10px;
+}
+
+/* stile p delle attività */
+.attivita .column p {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+/* stile attivita fine*/
+
+
 html, body {
     margin: 0;
     height: 100%;
@@ -335,15 +362,7 @@ p.containerImages {
 }
 
 
-/* Create three equal columns that floats next to each other */
-.attivita .column {
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); *//*carine le ombre ma no*/
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    border: 2px solid #eee;
-<!-- bordo tra le colonne -->
-}
+
 
 /* Clear floats after the columns */
 .attivita .row:after {
