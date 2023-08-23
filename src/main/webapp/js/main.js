@@ -136,7 +136,7 @@ function validateFormForIscriviti() {
 
 function ValidateEmailContacts() {
     let email = document.forms["contacts"]["email"].value;
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var mailformat = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
     if (mailformat.test(email)) {
         return true;
     } else {
