@@ -55,6 +55,7 @@
                 <label for="reason" class="form-label">Motivo di contatto </label>
                 <div class="inputfield">
                     <select name="reason" id="reason" >
+                        <option style="display:none">
                         <option value="donazione">Vorrei fare una donazione</option>
                         <option value="adozione">Vorrei adottare un amico a quattro zampe</option>
                         <option value="volontario">Vorrei rendermi disponibile come volontario</option>

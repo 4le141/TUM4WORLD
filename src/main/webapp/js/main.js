@@ -20,22 +20,22 @@ function requiredFunctionForContatti() {
     let email = document.getElementById("email");
     let motivo = document.getElementById("reason");
     let valido = true;
-    if (nome.value === "") {
+    /* if (nome.value === "") {
         alert("Il campo nome non può essere vuoto");
         valido = false;
     }
     if (cognome.value === "") {
         alert("Il campo cognome non può essere vuoto");
         valido = false;
-    }
+    }*/
     if (email.value === "") {
         alert("Il campo email  non può essere vuoto");
         valido = false;
     }
-    if (motivo.value === "") {
+    /* if (motivo.value === "") {
         alert("Il campo motivazione di contatto non può essere vuoto");
         valido = false;
-    }
+    }*/
     return valido;
 }
 
